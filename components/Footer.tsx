@@ -31,6 +31,13 @@ const LinkedinIcon = ({ size = 24 }: { size?: number }) => (
   </svg>
 );
 
+const YoutubeIcon = ({ size = 24 }: { size?: number }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"></path>
+    <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon>
+  </svg>
+);
+
 export default function Footer() {
   return (
     <footer className="relative bg-[#0d0A30] text-gray-300 pt-24 pb-12 overflow-hidden">
@@ -63,10 +70,11 @@ export default function Footer() {
                 { icon: <FacebookIcon size={18} />, label: "Facebook" },
                 { icon: <TwitterIcon size={18} />, label: "Twitter" },
                 { icon: <InstagramIcon size={18} />, label: "Instagram" },
-                { icon: <LinkedinIcon size={18} />, label: "LinkedIn" }
+                { icon: <LinkedinIcon size={18} />, label: "LinkedIn" },
+                { icon: <YoutubeIcon size={18} />, label: "YouTube" }
               ].map((social, idx) => (
-                <a key={idx} href="#" aria-label={social.label} className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#3EA9D8] hover:border-[#3EA9D8] hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-lg group">
-                   <span className="text-gray-400 group-hover:text-white transition-colors">{social.icon}</span>
+                <a key={idx} href="#" aria-label={social.label} className="w-10 h-10 rounded-full bg-[#1D1860] border border-white/10 flex items-center justify-center text-white hover:bg-[#3EA9D8] hover:scale-110 active:scale-95 transition-all duration-300 shadow-lg group">
+                   {social.icon}
                 </a>
               ))}
             </div>
@@ -115,7 +123,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <h4 className="text-white font-medium text-[15px]">Global Headquarters</h4>
-                  <p className="text-gray-400 text-sm mt-1">123 Express Avenue, Suite 400<br/>New York, NY 10001</p>
+                  <p className="text-gray-400 text-sm mt-1">F-7, Ground Floor, Main road, Kalkaji <br/>New Delhi 110017</p>
                 </div>
               </li>
               <li className="flex items-start">
@@ -124,7 +132,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <h4 className="text-white font-medium text-[15px]">24/7 Support</h4>
-                  <p className="text-gray-400 text-sm mt-1">+1 (800) 123-4567</p>
+                  <p className="text-gray-400 text-sm mt-1">+91-9811350228<br/>+91-9311350228</p>
                 </div>
               </li>
               <li className="flex items-start">
@@ -133,7 +141,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <h4 className="text-white font-medium text-[15px]">Email Us</h4>
-                  <p className="text-gray-400 text-sm mt-1">support@airexpress.com</p>
+                  <p className="text-gray-400 text-sm mt-1">debairexpress228@gmail.com</p>
                 </div>
               </li>
             </ul>

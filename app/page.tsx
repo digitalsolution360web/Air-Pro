@@ -3,10 +3,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  MoveRight, Phone, CheckCircle2, TrendingUp, Truck, Train, Plane, 
-  Package, ShieldCheck, Leaf, Target, Users, MapPin, Box, 
-  Briefcase, Quote, Star, Award, Heart, Globe, Clock
+import {
+  MoveRight, Phone, CheckCircle2, TrendingUp, Truck, Train, Plane,
+  Package, ShieldCheck, Leaf, Target, Users, MapPin, Box,
+  Briefcase, Quote, Star, Award, Heart, Globe, Clock, HelpCircle, ChevronDown
 } from "lucide-react";
 import { motion, AnimatePresence, useInView, animate } from "framer-motion";
 
@@ -33,10 +33,10 @@ const CounterValue = ({ to }: { to: number }) => {
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
-  
+
   const sliderImages = [
-    "/banner.jpg",
-    "/b6.jpeg",
+    "/b8.jpeg",
+    "/b9.jpeg",
     "/b7.jpeg"
   ];
 
@@ -62,9 +62,9 @@ export default function Home() {
   ];
 
   const services = [
-    { icon: Truck, title: "Road Express Logistics", desc: "Reliable surface transportation covering the entire Indian subcontinent with a dedicated fleet and real-time transit visibility.", color: "bg-blue-600", img: "/b2.jpeg", badge: "Most Reliable" },
-    { icon: Plane, title: "Air Freight & Next-Day", desc: "Speed is our core promise. We offer overnight deliveries to all major Indian metros through our premium air cargo network.", color: "bg-[#3EA9D8]", img: "/b4.jpeg", badge: "Critical Priority" },
-    { icon: Train, title: "Rail & Multi-Modal Cargo", desc: "Cost-optimized large scale cargo solutions leveraging India's vast railway infrastructure for your industrial bulk shipments.", color: "bg-purple-600", img: "/b3.jpeg", badge: "Bulk Solution" },
+    { icon: Truck, title: "Road Express Logistics", desc: "Reliable surface transportation covering the entire Indian subcontinent with a dedicated fleet and real-time transit visibility.", color: "bg-blue-600", img: "/b7.jpeg", badge: "Most Reliable" },
+    { icon: Plane, title: "Air Freight & Next-Day", desc: "Speed is our core promise. We offer overnight deliveries to all major Indian metros through our premium air cargo network.", color: "bg-[#3EA9D8]", img: "/air.jpg", badge: "Critical Priority" },
+    { icon: Train, title: "Rail & Multi-Modal Cargo", desc: "Cost-optimized large scale cargo solutions leveraging India's vast railway infrastructure for your industrial bulk shipments.", color: "bg-purple-600", img: "/train.jpg", badge: "Bulk Solution" },
     { icon: Package, title: "Specialized Hand Delivery", desc: "Exclusive sensitive document and parcel handling for high-value items requiring unparalleled personal care and security.", color: "bg-orange-600", img: "/b5.jpeg", badge: "High Security" }
   ];
 
@@ -101,10 +101,10 @@ export default function Home() {
 
   return (
     <div className="flex flex-col w-full min-h-screen font-sans bg-white overflow-x-hidden">
-      
+
       {/* 1. Hero Section */}
-      <section className="relative w-full pt-20 pb-12 lg:pt-28 lg:pb-16 overflow-hidden min-h-[450px] md:min-h-[550px] lg:min-h-[600px] flex items-center bg-black">
-        
+      <section className="relative w-full pt-16 pb-8 lg:pt-24 lg:pb-12 overflow-hidden min-h-[400px] md:min-h-[500px] lg:min-h-[550px] flex items-center bg-black">
+
         {/* Background Image Slider */}
         <AnimatePresence mode="popLayout">
           <motion.div
@@ -115,13 +115,13 @@ export default function Home() {
             transition={{ duration: 1.5, ease: "easeInOut" }}
             className="absolute inset-0 z-0"
           >
-            <Image 
-              src={sliderImages[currentSlide]} 
-              alt={`Deb Air Express Banner`} 
-              fill 
+            <Image
+              src={sliderImages[currentSlide]}
+              alt={`Deb Air Express Banner`}
+              fill
               priority
               sizes="100vw"
-              className="object-cover object-center" 
+              className="object-cover object-center"
             />
           </motion.div>
         </AnimatePresence>
@@ -129,9 +129,9 @@ export default function Home() {
         {/* Premium Overlays */}
         <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#06041A] via-[#06041A]/50 to-transparent"></div>
         <div className="absolute inset-0 z-10 bg-black/30"></div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 flex flex-col lg:flex-row items-center w-full">
-          <motion.div 
+          <motion.div
             className="flex-1 text-left max-w-2xl"
             initial="hidden"
             animate="visible"
@@ -143,10 +143,10 @@ export default function Home() {
             </motion.div>
 
             <motion.h1 variants={fadeInUp} className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
-              Revolutionizing <br/> 
+              Revolutionizing <br />
               <span className="text-[#3EA9D8]">Indian Logistics</span>
             </motion.h1>
-            
+
             <motion.p variants={fadeInUp} className="text-sm md:text-base text-gray-300 mb-8 leading-relaxed max-w-lg font-medium opacity-90">
               Empowering your growth with 27 years of technological precision and nationwide reach. Your mission-critical shipments, our priority.
             </motion.p>
@@ -161,7 +161,7 @@ export default function Home() {
                 24/7 Priority Support
               </div>
             </motion.div>
-            
+
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
               <Link href="/track" className="w-full sm:w-auto">
                 <button className="w-full bg-[#3EA9D8] hover:bg-[#288eb9] text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl active:scale-95 flex items-center justify-center">
@@ -180,10 +180,10 @@ export default function Home() {
       </section>
 
       {/* 2. Company Introduction */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <motion.div 
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -193,64 +193,97 @@ export default function Home() {
                 <Image src="/b1.jpeg" alt="Logistics Support" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-[#3EA9D8] p-6 rounded-2xl shadow-2xl z-20 hidden md:block">
-                 <div className="flex items-center gap-3 text-white">
-                    <Globe size={32} />
-                    <div>
-                       <div className="font-bold text-xl uppercase tracking-tighter">Pan India</div>
-                       <div className="text-[10px] uppercase font-black tracking-widest opacity-80">Network Coverage</div>
-                    </div>
-                 </div>
+                <div className="flex items-center gap-3 text-white">
+                  <Globe size={32} />
+                  <div>
+                    <div className="font-bold text-xl uppercase tracking-tighter">Pan India</div>
+                    <div className="text-[10px] uppercase font-black tracking-widest opacity-80">Network Coverage</div>
+                  </div>
+                </div>
               </div>
             </motion.div>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="flex-1"
             >
               <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-xs mb-4 block">Proven Performance</span>
-              <h3 className="text-2xl md:text-3xl font-black text-[#1D1860] mb-6 leading-tight">
-                27 Years of Relentless <br/> Logistics Perfection
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-[#1D1860] mb-6 leading-tight">
+                27 Years of Relentless <br /> Logistics Perfection
               </h3>
               <p className="text-gray-600 text-sm md:text-[15px] mb-6 leading-relaxed">
                 Founded in 1995, Deb Air Express has evolved from a local courier and cargo handler into a nationwide logistics powerhouse. We provide end-to-end solutions that bridge the gap between businesses and their goals across every pincode in India.
               </p>
-              <div className="space-y-4 mb-10">
+              <div className="space-y-4 mb-8">
                 {["Proprietary Tracking Infrastructure", "Dedicated Multi-Modal Fleet", "Industrial Scale Scalability"].map((feat) => (
-                   <div key={feat} className="flex items-center font-bold text-gray-700 text-sm">
-                      <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center mr-3 text-[#3EA9D8]">
-                        <CheckCircle2 size={14} />
-                      </div>
-                      {feat}
-                   </div>
+                  <div key={feat} className="flex items-center font-bold text-gray-700 text-sm">
+                    <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center mr-3 text-[#3EA9D8]">
+                      <CheckCircle2 size={14} />
+                    </div>
+                    {feat}
+                  </div>
                 ))}
               </div>
               <Link href="/about">
-                 <button className="px-8 py-4 bg-[#1D1860] text-white rounded-xl font-bold hover:bg-[#2e268a] transition-all flex items-center shadow-lg">
-                   Core Values <MoveRight className="ml-3 w-5 h-5" />
-                 </button>
+                <button className="px-8 py-3.5 bg-[#1D1860] text-white rounded-xl font-bold hover:bg-[#2e268a] transition-all flex items-center shadow-lg">
+                  Core Values <MoveRight className="ml-3 w-5 h-5" />
+                </button>
               </Link>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* 3. Core Services - ZIG ZAG FORM */}
-      <section className="py-16 bg-slate-50 overflow-hidden">
+      {/* 2.5 Why Choose Us Section */}
+      <section className="py-12 bg-slate-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
+            <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[10px] mb-3 block">Our Edge</span>
+            <h3 className="text-2xl md:text-3xl font-black text-[#1D1860]">Why Choose Us?</h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { icon: ShieldCheck, title: "Secure & Reliable", desc: "Enterprise-grade security and advanced tracking for every shipment across our network." },
+              { icon: Clock, title: "Speed Delivery", desc: "Our premium air freight network ensures next-day delivery in all major Indian metros." },
+              { icon: MapPin, title: "Wide Coverage", desc: "Serving every pincode in India through our proprietary multi-modal transport hubs." }
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="p-8 rounded-[2rem] bg-white border border-gray-100 hover:border-[#3EA9D8]/30 hover:shadow-[0_20px_50px_rgba(29,24,96,0.08)] transition-all group"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-[#3EA9D8] mb-6 shadow-sm group-hover:bg-[#3EA9D8] group-hover:text-white transition-all transform group-hover:rotate-6">
+                  <item.icon size={28} />
+                </div>
+                <h4 className="text-xl font-black text-[#1D1860] mb-3">{item.title}</h4>
+                <p className="text-gray-500 text-sm leading-relaxed font-medium">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Core Services - ZIG ZAG FORM */}
+      <section className="py-12 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
             <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[10px] mb-3 block underline underline-offset-8 decoration-2">Premium Expertise</span>
             <h3 className="text-2xl md:text-3xl font-black text-[#1D1860]">Our Strategic Solutions</h3>
           </div>
 
           <div className="space-y-20">
             {services.map((service, i) => (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 className={`flex flex-col ${i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} items-center gap-12 lg:gap-24`}
               >
                 {/* Image Part */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: i % 2 === 0 ? -100 : 100 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -269,7 +302,7 @@ export default function Home() {
                 </motion.div>
 
                 {/* Text Part */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: i % 2 === 0 ? 100 : -100 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -294,79 +327,130 @@ export default function Home() {
       </section>
 
       {/* 4. Testimonials */}
-      <section className="py-16 bg-white relative">
+      <section className="py-12 bg-slate-50 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[10px] mb-3 block">Endorsements</span>
             <h3 className="text-2xl md:text-3xl font-black text-[#1D1860]">What Clients Say</h3>
           </div>
 
           <div className="relative max-w-4xl mx-auto">
             <div className="flex flex-col items-center">
-               <AnimatePresence mode="wait">
-                 <motion.div
-                   key={activeTestimonial}
-                   initial={{ opacity: 0, scale: 0.95 }}
-                   animate={{ opacity: 1, scale: 1 }}
-                   exit={{ opacity: 0, scale: 1.05 }}
-                   transition={{ duration: 0.4 }}
-                   className="w-full"
-                 >
-                    <div className="flex flex-col items-center">
-                       <div className="relative mb-8">
-                          <div className="w-24 h-24 md:w-28 md:h-28 rounded-full ring-4 ring-[#3EA9D8]/20 p-1">
-                             <Image 
-                               src={testimonials[activeTestimonial].image} 
-                               alt={testimonials[activeTestimonial].name} 
-                               width={112} height={112}
-                               className="rounded-full object-cover" 
-                             />
-                          </div>
-                          <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-[#3EA9D8] rounded-full flex items-center justify-center text-white border-2 border-white shadow-lg">
-                             <Quote size={14} fill="currentColor" />
-                          </div>
-                       </div>
-
-                       <div className="bg-slate-50/50 p-8 md:p-12 rounded-[2.5rem] text-center border border-gray-50 relative">
-                          <div className="flex justify-center gap-1 mb-6">
-                             {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#FFC107" className="text-[#FFC107]" />)}
-                          </div>
-                          <p className="text-base md:text-lg text-gray-700 font-medium italic mb-8 leading-relaxed max-w-2xl mx-auto">
-                            "{testimonials[activeTestimonial].text}"
-                          </p>
-                          <h4 className="text-xl font-black text-[#1D1860] mb-1">{testimonials[activeTestimonial].name}</h4>
-                          <span className="text-[#3EA9D8] font-bold uppercase tracking-widest text-[10px]">{testimonials[activeTestimonial].role}</span>
-                       </div>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeTestimonial}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 1.05 }}
+                  transition={{ duration: 0.4 }}
+                  className="w-full"
+                >
+                  <div className="flex flex-col items-center">
+                    <div className="relative mb-8">
+                      <div className="w-24 h-24 md:w-28 md:h-28 rounded-full ring-4 ring-[#3EA9D8]/20 p-1">
+                        <Image
+                          src={testimonials[activeTestimonial].image}
+                          alt={testimonials[activeTestimonial].name}
+                          width={112} height={112}
+                          className="rounded-full object-cover"
+                        />
+                      </div>
+                      <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-[#3EA9D8] rounded-full flex items-center justify-center text-white border-2 border-white shadow-lg">
+                        <Quote size={14} fill="currentColor" />
+                      </div>
                     </div>
-                 </motion.div>
-               </AnimatePresence>
 
-               <div className="flex gap-2 mt-10">
-                  {testimonials.map((_, i) => (
-                    <button 
-                      key={i} 
-                      onClick={() => setActiveTestimonial(i)}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${activeTestimonial === i ? "bg-[#3EA9D8] w-8" : "bg-gray-200 w-3 hover:bg-gray-300"}`}
-                      aria-label={`Go to testimonial ${i + 1}`}
-                    />
-                  ))}
-               </div>
+                    <div className="bg-white p-8 md:p-12 rounded-[2.5rem] text-center border border-gray-50 relative shadow-sm">
+                      <div className="flex justify-center gap-1 mb-6">
+                        {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#FFC107" className="text-[#FFC107]" />)}
+                      </div>
+                      <p className="text-base md:text-lg text-gray-700 font-medium italic mb-8 leading-relaxed max-w-2xl mx-auto">
+                        "{testimonials[activeTestimonial].text}"
+                      </p>
+                      <h4 className="text-xl font-black text-[#1D1860] mb-1">{testimonials[activeTestimonial].name}</h4>
+                      <span className="text-[#3EA9D8] font-bold uppercase tracking-widest text-[10px]">{testimonials[activeTestimonial].role}</span>
+                    </div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+
+              <div className="flex gap-2 mt-10">
+                {testimonials.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setActiveTestimonial(i)}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${activeTestimonial === i ? "bg-[#3EA9D8] w-8" : "bg-gray-200 w-3 hover:bg-gray-300"}`}
+                    aria-label={`Go to testimonial ${i + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* 4.5 FAQ Section */}
+      <section className="py-12 bg-white">
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[10px] mb-3 block">Information</span>
+            <h3 className="text-2xl md:text-3xl font-black text-[#1D1860]">Frequently Asked Questions</h3>
+          </div>
+
+          <div className="space-y-4">
+            {[
+              { q: "What is your typical delivery time?", a: "For major Indian metros, we offer next-day air freight via our premium cargo network. Standard surface cargo typically takes 3-5 business days." },
+              { q: "How can I track my shipment?", a: "Enter your Waybill or Reference number in our 'Track Consignment' tool at the top of this page for real-time location updates." },
+              { q: "Do you handle high-value or sensitive cargo?", a: "Absolutely. Our 'Specialized Hand Delivery' is designed for high-value items, documents, and fragile cargo requiring dedicated personal care." },
+              { q: "Which areas do you serve in India?", a: "We provide comprehensive Pan-India coverage, reaching every major city and remote district through our integrated transport network." }
+            ].map((faq, idx) => (
+              <details key={idx} className="group bg-slate-50 rounded-2xl border border-gray-100 overflow-hidden transition-all duration-300">
+                <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                  <span className="font-bold text-[#1D1860] pr-4">{faq.q}</span>
+                  <ChevronDown className="w-5 h-5 text-[#3EA9D8] group-open:rotate-180 transition-transform" />
+                </summary>
+                <div className="px-6 pb-6 text-gray-500 text-sm leading-relaxed border-t border-gray-100/50 pt-4 font-medium">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4.6 Store Locator / Map Section */}
+      <section className="py-12 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[10px] mb-2 block">Visit Us</span>
+            <h3 className="text-2xl md:text-3xl font-black text-[#1D1860]">Find Our Presence</h3>
+          </div>
+          <div className="w-full h-[450px] md:h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.9273938005636!2d77.25380299999999!3d28.541902000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3da3ead3a8b%3A0xe35b169b3e36c0d3!2sDeb%20Air%20Express%20Cargo%20And%20Couriers!5e0!3m2!1sen!2sin!4v1775493368659!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
       {/* 5. Professional Statistics */}
-      <section className="py-16 bg-[#06041A] relative overflow-hidden">
+      <section className="py-12 bg-[#06041A] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 divide-x-0 lg:divide-x divide-white/10">
-            {[ 
+            {[
               { icon: Award, to: 27, label: "Years Experience" },
               { icon: Users, to: 135, label: "Team Members" },
               { icon: Heart, to: 957, label: "Happy Clients" },
               { icon: Truck, to: 1839, label: "Cargo Tracking" }
             ].map((stat, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -392,27 +476,27 @@ export default function Home() {
       </section>
 
       {/* 6. Final CTA Section */}
-      <section className="py-16 relative bg-white">
+      <section className="py-12 relative bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-           <div className="bg-[#1D1860] rounded-[2.5rem] p-10 md:p-16 text-white shadow-2xl relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-96 h-96 bg-[#3EA9D8]/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
-              
-              <div className="relative z-10 max-w-2xl mx-auto">
-                 <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight">Prepare Your Business <br/> <span className="text-[#3EA9D8]">Next Logistics Jump</span></h2>
-                 <p className="text-gray-300 text-sm md:text-base mb-10 opacity-90 font-medium">
-                    Contact our consultation team today to optimize your supply chain with our award-winning logistics framework.
-                 </p>
-                 <div className="flex flex-col items-center">
-                    <a href="tel:+919311350228" className="bg-[#3EA9D8] hover:bg-white hover:text-[#1D1860] text-white px-8 py-4 rounded-xl font-bold text-lg md:text-xl transition-all shadow-lg flex items-center group/btn active:scale-95">
-                       <Phone className="mr-3 w-5 h-5 group-hover/btn:scale-110 transition-transform" />
-                       Direct Connect: +91-9311350228
-                    </a>
-                 </div>
+          <div className="bg-[#1D1860] rounded-[2.5rem] p-10 md:p-16 text-white shadow-2xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-[#3EA9D8]/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+
+            <div className="relative z-10 max-w-2xl mx-auto">
+              <h2 className="text-2xl md:text-4xl font-black mb-6 leading-tight">Prepare Your Business <br /> <span className="text-[#3EA9D8]">Next Logistics Jump</span></h2>
+              <p className="text-gray-300 text-sm md:text-base mb-10 opacity-90 font-medium">
+                Contact our consultation team today to optimize your supply chain with our award-winning logistics framework.
+              </p>
+              <div className="flex flex-col items-center">
+                <a href="tel:+919311350228" className="bg-[#3EA9D8] hover:bg-white hover:text-[#1D1860] text-white px-8 py-4 rounded-xl font-bold text-lg md:text-xl transition-all shadow-lg flex items-center group/btn active:scale-95">
+                  <Phone className="mr-3 w-5 h-5 group-hover/btn:scale-110 transition-transform" />
+                  Direct Connect: +91-9311350228
+                </a>
               </div>
-           </div>
+            </div>
+          </div>
         </div>
       </section>
-      
+
     </div>
   );
 }
