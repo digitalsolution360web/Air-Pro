@@ -24,3 +24,11 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes shine {
+  100% { left: 125%; }
+}
+
+.animate-shine {
+  animation: shine 1.5s infinite;
+}
