@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { 
-  Phone, Mail, MapPin, Send, MessageSquare, 
+  Phone, Mail, MapPin, Send, 
   Clock, Globe, MoveRight, CheckCircle2 
 } from "lucide-react";
 import { motion } from "framer-motion";

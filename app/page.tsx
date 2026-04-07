@@ -4,9 +4,9 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  MoveRight, Phone, CheckCircle2, TrendingUp, Truck, Train, Plane,
-  Package, ShieldCheck, Leaf, Target, Users, MapPin, Box,
-  Briefcase, Quote, Star, Award, Heart, Globe, Clock, HelpCircle, ChevronDown
+  MoveRight, Phone, CheckCircle2, Truck, Train, Plane,
+  Package, ShieldCheck, Users, MapPin,
+  Quote, Star, Award, Heart, Globe, Clock, ChevronDown
 } from "lucide-react";
 import { motion, AnimatePresence, useInView, animate } from "framer-motion";
 

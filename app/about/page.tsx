@@ -5,8 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { 
   CheckCircle2, Globe, Clock, ShieldCheck, Phone, 
-  HelpCircle, MoveRight, Leaf, Award, Users, Heart, Truck,
-  Target, Zap, Box, Building2, MapPin, Search, BarChart3, Database,
+  MoveRight, Leaf, Award, Users, Heart, Truck,
+  Zap, Box, MapPin, Search, BarChart3, Database,
   Stethoscope, Briefcase, FileText
 } from "lucide-react";
 import { motion, useInView, animate } from "framer-motion";
