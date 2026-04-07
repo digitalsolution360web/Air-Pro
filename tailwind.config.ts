@@ -18,11 +18,16 @@ const config: Config = {
       },
       animation: {
         'shine': 'shine 1.5s infinite',
+        'blink': 'blink 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       keyframes: {
         shine: {
           '100%': { left: '125%' },
         },
+        blink: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.4' },
+        }
       },
     },
   },
