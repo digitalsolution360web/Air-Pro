@@ -12,7 +12,14 @@ import { motion } from "framer-motion";
 export default function Services() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { 
+        duration: 0.6, 
+        ease: "easeOut" as const
+      } 
+    }
   };
 
   const services = [
@@ -54,7 +61,7 @@ export default function Services() {
     <div className="flex flex-col w-full min-h-screen font-sans bg-white overflow-x-hidden pt-24">
 
       {/* 1. Cinematic Header Banner */}
-      <section className="relative w-full py-20 lg:py-32 overflow-hidden bg-[#06041A]">
+      <section className="relative w-full py-16 lg:py-24 overflow-hidden bg-[#06041A]">
         <div className="absolute inset-0 z-0">
           <Image
             src="/b9.jpeg"
@@ -99,9 +106,9 @@ export default function Services() {
       </section>
 
       {/* 2. Services Grid - Professional Hover UI */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12">
             <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[11px] mb-4 block underline underline-offset-8 decoration-2 decoration-[#3EA9D8]/20">Global Standards</span>
             <h2 className="text-2xl md:text-3xl font-black text-[#1D1860] leading-tight">Elite Supply Chain Capabilities</h2>
           </div>
@@ -165,8 +172,212 @@ export default function Services() {
         </div>
       </section>
 
-      {/* 3. Competitive Advantage - Feature Reveal */}
-      <section className="py-20 bg-slate-50 relative overflow-hidden">
+      {/* 3. Deep-Dive Industry Solutions - Premium Zig-Zag Layout */}
+      <section className="py-16 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-[#3EA9D8] font-black tracking-[0.2em] uppercase text-[10px] mb-4 block bg-blue-50 w-fit mx-auto px-4 py-1.5 rounded-full ring-1 ring-[#3EA9D8]/20">Global Operational Excellence</span>
+            <h2 className="text-3xl md:text-5xl font-black text-[#1D1860] leading-tight max-w-3xl mx-auto">
+              Precision Logistics for Every <span className="text-[#3EA9D8]">Industry Sector</span>
+            </h2>
+          </div>
+
+          <div className="space-y-20">
+            {/* Zig-Zag 1: Warehousing */}
+            <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 group">
+              <motion.div 
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="flex-1 w-full"
+              >
+                <div className="inline-block bg-[#1D1860]/5 text-[#1D1860] font-black px-4 py-1 rounded-lg text-[10px] tracking-widest uppercase mb-6">Sector 01</div>
+                <h3 className="text-3xl md:text-5xl font-black text-[#1D1860] mb-6 leading-[1.1] tracking-tight">
+                  Strategic <br/> <span className="text-[#3EA9D8]">Warehousing</span> & <br/> Smart Inventory
+                </h3>
+                <p className="text-gray-500 text-lg md:text-xl font-medium leading-relaxed mb-6 max-w-xl">
+                  Optimize your supply chain with our state-of-the-art warehousing facilities. We offer secure, climate-controlled storage integrated with real-time inventory tracking systems for maximum efficiency.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-8 mb-8">
+                  {["Real-time Stock Visibility", "Advanced Security Systems", "Cross-Docking Efficiency", "Customized Pick & Pack"].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#3EA9D8]"></div>
+                      <span className="font-bold text-[#1D1860] text-sm uppercase tracking-tight">{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <button className="group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-4 text-[#1D1860] font-black text-xs tracking-[0.2em] uppercase">
+                  Learn Operational Stack <MoveRight className="w-5 h-5 text-[#3EA9D8]" />
+                </button>
+              </motion.div>
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="flex-1 relative w-full aspect-square"
+              >
+                <div className="relative w-full h-full rounded-[3rem] overflow-hidden shadow-[0_50px_100px_rgba(29,24,96,0.15)] ring-[20px] ring-gray-50 group-hover:ring-[#3EA9D8]/5 transition-all duration-700">
+                  <Image src="/b3.jpeg" alt="Warehousing" fill className="object-cover scale-110 group-hover:scale-100 transition-transform duration-1000" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#1D1860]/40 to-transparent"></div>
+                </div>
+                {/* Floating Stats */}
+                <div className="absolute -bottom-10 -right-5 bg-white p-6 rounded-2xl shadow-2xl z-20 border border-gray-100 animate-pulse">
+                  <div className="text-[#3EA9D8] font-black text-3xl mb-1">99.9%</div>
+                  <div className="text-[#1D1860] font-bold text-[9px] uppercase tracking-widest leading-none">Inventory Accuracy</div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Zig-Zag 2: Cold Chain (Reversed) */}
+            <div className="flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-24 group">
+              <motion.div 
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="flex-1 w-full lg:pl-12"
+              >
+                <div className="inline-block bg-[#3EA9D8]/10 text-[#3EA9D8] font-black px-4 py-1 rounded-lg text-[10px] tracking-widest uppercase mb-6">Sector 02</div>
+                <h3 className="text-3xl md:text-5xl font-black text-[#1D1860] mb-6 leading-[1.1] tracking-tight">
+                  Precision-Controlled <br/> <span className="text-[#3EA9D8]">Cold Chain</span> Logistics
+                </h3>
+                <p className="text-gray-500 text-lg md:text-xl font-medium leading-relaxed mb-6 max-w-xl">
+                  Ensure the integrity of your temperature-sensitive goods. From pharmaceuticals to perishables, our specialized fleet maintains exact conditions from origin to destination across India.
+                </p>
+                <div className="space-y-4 mb-8">
+                  {[
+                    { t: "Strict Temperature Monitoring", d: "End-to-end logging for total accountability." },
+                    { t: "FDA & ISO Compliant", d: "Meeting global standards for sensitive medical cargo." }
+                  ].map((item, i) => (
+                    <div key={i} className="flex gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+                        <ShieldCheck className="text-[#3EA9D8]" size={24} />
+                      </div>
+                      <div>
+                        <h4 className="font-black text-[#1D1860] text-sm uppercase tracking-tight mb-1">{item.t}</h4>
+                        <p className="text-gray-500 text-xs font-semibold leading-relaxed max-w-xs">{item.d}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <Link href="/contact" className="inline-block bg-[#1D1860] text-white px-10 py-5 rounded-2xl font-black text-xs tracking-[0.2em] uppercase hover:bg-[#3EA9D8] transition-colors shadow-lg active:scale-95">
+                  Request specialized Quote
+                </Link>
+              </motion.div>
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="flex-1 relative w-full aspect-square"
+              >
+                <div className="relative w-full h-full rounded-[3rem] overflow-hidden shadow-[0_50px_100px_rgba(29,24,96,0.15)] ring-[20px] ring-gray-50 group-hover:ring-[#3EA9D8]/5 transition-all duration-700">
+                  <Image src="/b1.jpeg" alt="Cold Chain" fill className="object-cover scale-110 group-hover:scale-100 transition-transform duration-1000" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#1D1860]/40 to-transparent"></div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Zig-Zag 3: E-commerce */}
+            <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 group">
+              <motion.div 
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="flex-1 w-full"
+              >
+                <div className="inline-block bg-[#1D1860]/5 text-[#1D1860] font-black px-4 py-1 rounded-lg text-[10px] tracking-widest uppercase mb-6">Sector 03</div>
+                <h3 className="text-3xl md:text-5xl font-black text-[#1D1860] mb-6 leading-[1.1] tracking-tight">
+                  Seamless <br/> <span className="text-[#3EA9D8]">E-commerce</span> & <br/> Last-Mile Delivery
+                </h3>
+                <p className="text-gray-500 text-lg md:text-xl font-medium leading-relaxed mb-6 max-w-xl">
+                  Empower your online business with our scalable fulfillment solutions. We handle everything from picking and packing to lightning-fast last-mile delivery and effortless reverse logistics.
+                </p>
+                <div className="grid grid-cols-2 gap-8 mb-8">
+                  <div>
+                    <div className="text-4xl font-black text-[#3EA9D8] mb-2 tracking-tighter">24H</div>
+                    <div className="text-[#1D1860] font-black text-[10px] uppercase tracking-widest border-l-2 border-[#1D1860] pl-3">Standard<br/>Delivery Cycle</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-black text-[#3EA9D8] mb-2 tracking-tighter">0%</div>
+                    <div className="text-[#1D1860] font-black text-[10px] uppercase tracking-widest border-l-2 border-[#1D1860] pl-3">Inventory<br/>Loss Rate</div>
+                  </div>
+                </div>
+                <Link href="/contact" className="inline-flex items-center gap-4 text-[#3EA9D8] font-black text-xs tracking-[0.2em] uppercase border-b-2 border-[#3EA9D8]/20 pb-2 hover:border-[#3EA9D8] transition-all">
+                  Scale your business <MoveRight className="w-5 h-5" />
+                </Link>
+              </motion.div>
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="flex-1 relative w-full aspect-square"
+              >
+                <div className="relative w-full h-full rounded-[3rem] overflow-hidden shadow-[0_50px_100px_rgba(29,24,96,0.15)] ring-[20px] ring-gray-50 group-hover:ring-[#3EA9D8]/5 transition-all duration-700">
+                  <Image src="/b6.jpeg" alt="E-commerce Fulfillment" fill className="object-cover scale-110 group-hover:scale-100 transition-transform duration-1000" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#1D1860]/40 to-transparent"></div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Zig-Zag 4: Project Cargo (Reversed) */}
+            <div className="flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-24 group">
+              <motion.div 
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="flex-1 w-full lg:pl-12"
+              >
+                <div className="inline-block bg-[#1D1860]/5 text-[#1D1860] font-black px-4 py-1 rounded-lg text-[10px] tracking-widest uppercase mb-6">Sector 04</div>
+                <h3 className="text-3xl md:text-5xl font-black text-[#1D1860] mb-6 leading-[1.1] tracking-tight">
+                  Industrial <br/> <span className="text-[#3EA9D8]">Project Cargo</span> & <br/> Heavy Lift
+                </h3>
+                <p className="text-gray-500 text-lg md:text-xl font-medium leading-relaxed mb-6 max-w-xl">
+                  Handling the complex with precision engineering. From over-dimensional industrial machinery to mission-critical infrastructure, we plan and execute the most challenging transport missions.
+                </p>
+                <div className="grid grid-cols-1 gap-y-3 mb-8">
+                  {[
+                    { t: "Route Feasibility Surveys", d: "Detailed planning for oversized cargo movement." },
+                    { t: "Heavy-Lift Equipment", d: "Specialized trailers and cranes for industrial loads." },
+                    { t: "End-to-End Project Care", d: "Dedicated on-site support until final placement." }
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-4">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#3EA9D8] mt-2"></div>
+                      <div>
+                        <span className="font-black text-[#1D1860] text-sm uppercase tracking-tight block">{item.t}</span>
+                        <span className="text-gray-400 text-[10px] font-bold uppercase">{item.d}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <button className="group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-4 text-[#1D1860] font-black text-xs tracking-[0.2em] uppercase">
+                  View Case Studies <MoveRight className="w-5 h-5 text-[#3EA9D8]" />
+                </button>
+              </motion.div>
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="flex-1 relative w-full aspect-square"
+              >
+                <div className="relative w-full h-full rounded-[3rem] overflow-hidden shadow-[0_50px_100px_rgba(29,24,96,0.15)] ring-[20px] ring-gray-50 group-hover:ring-[#3EA9D8]/5 transition-all duration-700">
+                  <Image src="/b8.jpeg" alt="Project Cargo" fill className="object-cover scale-110 group-hover:scale-100 transition-transform duration-1000" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#1D1860]/40 to-transparent"></div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Competitive Advantage - Feature Reveal */}
+      <section className="py-12 bg-slate-50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="flex-1">
@@ -211,7 +422,7 @@ export default function Services() {
       </section>
 
       {/* 4. Support Contact CTA */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-5xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
