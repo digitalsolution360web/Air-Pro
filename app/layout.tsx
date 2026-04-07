@@ -1,22 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "Professional Tracking Services",
-  description: "Best in class professional tracking services.",
+  title: "Deb Air Express | Professional Cargo & Logistics",
+  description: "India's Premier Logistics Partner — 27 years of reliable cargo delivery across every pincode.",
 };
 
 export default function RootLayout({
@@ -27,9 +22,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">
+      <body className={`min-h-full flex flex-col ${inter.className}`}>
         <Navbar />
         <main className="flex-grow">
           {children}
