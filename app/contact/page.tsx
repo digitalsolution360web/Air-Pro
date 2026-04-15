@@ -174,7 +174,7 @@ export default function Contact() {
       </section>
 
       {/* 3. Immersive Map Section */}
-      <section className="py-20 bg-slate-50 relative">
+      <section className="py-20 bg-[#f4f9fc] border-t border-[#3EA9D8]/10 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="text-center mb-16">
               <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[10px] mb-3 block">Presence</span>

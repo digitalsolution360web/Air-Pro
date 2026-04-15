@@ -180,7 +180,7 @@ export default function Home() {
       </section>
 
       {/* 2. Company Introduction */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-[#edf2f7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <motion.div
@@ -236,7 +236,7 @@ export default function Home() {
       </section>
 
       {/* 2.5 Why Choose Us Section */}
-      <section className="py-12 bg-slate-50 overflow-hidden">
+      <section className="py-16 bg-[#e8f0f7] overflow-hidden border-y border-[#3EA9D8]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[10px] mb-3 block">Our Edge</span>
@@ -269,65 +269,77 @@ export default function Home() {
       </section>
 
       {/* 3. Core Services - ZIG ZAG FORM */}
-      <section className="py-12 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
+      <div className="w-full">
+        {/* Services Title Section */}
+        <section className="pt-16 pb-6 bg-white overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[10px] mb-3 block underline underline-offset-8 decoration-2">Premium Expertise</span>
             <h3 className="text-2xl md:text-3xl font-black text-[#1D1860]">Our Strategic Solutions</h3>
           </div>
+        </section>
 
-          <div className="space-y-20">
-            {services.map((service, i) => (
-              <div
-                key={i}
-                className={`flex flex-col ${i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} items-center gap-12 lg:gap-24`}
-              >
-                {/* Image Part */}
-                <motion.div
-                  initial={{ opacity: 0, x: i % 2 === 0 ? -100 : 100 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8 }}
-                  className="flex-1 w-full"
-                >
-                  <div className="relative aspect-[16/9] rounded-[2rem] overflow-hidden shadow-2xl group border-8 border-white">
-                    <Image src={service.img} alt={service.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-110 transition-transform duration-700" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1D1860]/60 to-transparent"></div>
-                    <div className="absolute top-6 left-6">
-                      <span className={`px-4 py-2 rounded-full text-white text-[10px] font-black tracking-widest uppercase shadow-lg ${service.color}`}>
-                        {service.badge}
-                      </span>
+        {/* Individual Services Sections with Alternating Backgrounds */}
+        {services.map((service, i) => {
+          // Define a beautiful array of professional backgrounds for each row
+          const bgColors = [
+            "bg-white",
+            "bg-[#ddeefb]",
+            "bg-white",
+            "bg-[#ddeefb]"
+          ];
+          const bg = bgColors[i % 4];
+
+          return (
+            <section key={i} className={`py-16 lg:py-24 overflow-hidden border-b border-gray-100/50 ${bg}`}>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className={`flex flex-col ${i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} items-center gap-12 lg:gap-24`}>
+                  {/* Image Part */}
+                  <motion.div
+                    initial={{ opacity: 0, x: i % 2 === 0 ? -100 : 100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="flex-1 w-full"
+                  >
+                    <div className="relative aspect-[16/9] rounded-[2rem] overflow-hidden shadow-2xl group border-8 border-white">
+                      <Image src={service.img} alt={service.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#1D1860]/60 to-transparent"></div>
+                      <div className="absolute top-6 left-6">
+                        <span className={`px-4 py-2 rounded-full text-white text-[10px] font-black tracking-widest uppercase shadow-lg ${service.color}`}>
+                          {service.badge}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
 
-                {/* Text Part */}
-                <motion.div
-                  initial={{ opacity: 0, x: i % 2 === 0 ? 100 : -100 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8 }}
-                  className="flex-1 text-left"
-                >
-                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-2xl ${service.color} text-white shadow-xl mb-6`}>
-                    <service.icon size={24} />
-                  </div>
-                  <h4 className="text-2xl md:text-3xl font-black text-[#1D1860] mb-4 leading-tight">{service.title}</h4>
-                  <p className="text-gray-500 text-sm md:text-base font-medium leading-relaxed mb-6">
-                    {service.desc}
-                  </p>
-                  <Link href="/services" className="inline-flex items-center text-[#3EA9D8] font-black text-sm tracking-widest group">
-                    EXPLORE SERVICE <MoveRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                  </Link>
-                </motion.div>
+                  {/* Text Part */}
+                  <motion.div
+                    initial={{ opacity: 0, x: i % 2 === 0 ? 100 : -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="flex-1 text-left"
+                  >
+                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-2xl ${service.color} text-white shadow-xl mb-6`}>
+                      <service.icon size={24} />
+                    </div>
+                    <h4 className="text-2xl md:text-3xl font-black text-[#1D1860] mb-4 leading-tight">{service.title}</h4>
+                    <p className="text-gray-500 text-sm md:text-base font-medium leading-relaxed mb-6">
+                      {service.desc}
+                    </p>
+                    <Link href="/services" className="inline-flex items-center text-[#3EA9D8] font-black text-sm tracking-widest group">
+                      EXPLORE SERVICE <MoveRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                    </Link>
+                  </motion.div>
+                </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </section>
+          );
+        })}
+      </div>
 
       {/* 4. Testimonials */}
-      <section className="py-12 bg-slate-50 relative">
+      <section className="py-16 bg-[#edf2f7] border-y border-gray-200 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[10px] mb-3 block">Endorsements</span>
@@ -390,7 +402,7 @@ export default function Home() {
       </section>
 
       {/* 4.5 FAQ Section */}
-      <section className="py-12 bg-white">
+      <section className="py-16 bg-[#e6eef8] border-t border-[#3EA9D8]/10">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-10">
             <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[10px] mb-3 block">Information</span>
@@ -419,7 +431,7 @@ export default function Home() {
       </section>
 
       {/* 4.6 Store Locator / Map Section */}
-      <section className="py-12 bg-slate-50">
+      <section className="py-16 bg-[#eaeff5] border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[10px] mb-2 block">Visit Us</span>

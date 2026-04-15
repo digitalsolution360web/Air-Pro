@@ -168,7 +168,7 @@ export default function About() {
       </section>
 
       {/* 3. NEW: Specialized Capacities Section — High Value Extra Content */}
-      <section className="py-12 bg-slate-50 overflow-hidden relative">
+      <section className="py-16 bg-[#f4f9fc] border-y border-[#3EA9D8]/10 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="text-center mb-10">
               <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[8px] mb-2 block">Premium Capabilities</span>
@@ -240,7 +240,7 @@ export default function About() {
       </section>
 
       {/* 5. The Evolution Timeline — Tighter layout */}
-      <section className="py-12 bg-slate-50 overflow-hidden">
+      <section className="py-16 bg-[#f4f9fc] border-y border-[#3EA9D8]/10 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="text-center mb-12">
               <h3 className="text-xl md:text-2xl font-black text-[#1D1860] uppercase underline underline-offset-8 decoration-[#3EA9D8]/50 inline-block px-8 py-2">Corporate Journey</h3>

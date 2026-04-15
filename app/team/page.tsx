@@ -161,7 +161,7 @@ export default function Team() {
       </section>
 
       {/* 3. Core Values Row */}
-      <section className="py-16 bg-slate-50 relative overflow-hidden">
+      <section className="py-16 bg-[#f4f9fc] border-y border-[#3EA9D8]/10 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
