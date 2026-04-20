@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { 
   Phone, Mail, MapPin, Send, 
-  Clock, Globe, MoveRight, CheckCircle2 
+  Clock, Globe, MoveRight, CheckCircle2,
+  User, Building
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -86,11 +87,13 @@ export default function Contact() {
                  <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[10px] mb-4 block underline underline-offset-8 decoration-2 decoration-[#3EA9D8]/20">Global Outreach</span>
                  <h2 className="text-2xl md:text-3xl font-black text-[#1D1860] mb-8 leading-tight">Headquarters Presence & Support Channels</h2>
                  
-                 <div className="space-y-8">
+                 <div className="space-y-3.5">
                     {[
-                      { icon: MapPin, t: "Official Headquarters", d: "F-7, Ground Floor, Main road, Kalkaji, New Delhi 110017", c: "#" },
-                      { icon: Phone, t: "Voice Channels", d: "+91-9811350228 | +91-9311350228", c: "tel:+919811350228" },
-                      { icon: Mail, t: "Digital Support", d: "debairexpress228@gmail.com", c: "mailto:debairexpress228@gmail.com" },
+                      { icon: Building, t: "Company Name", d: "Deb Air Express", c: "#" },
+                      { icon: User, t: "Proprietor", d: "Lalan Kumar Singh", c: "#" },
+                      { icon: MapPin, t: "Address", d: "F-7 ground floor, main road Kalkaji, 110017", c: "#" },
+                      { icon: Phone, t: "Phone", d: "9811350228, 9311350228", c: "tel:+919811350228" },
+                      { icon: Mail, t: "Email", d: "debairexpress228@gmail.com", c: "mailto:debairexpress228@gmail.com" },
                       { icon: Clock, t: "Service Availability", d: "Monday to Sunday (24/7 Operations Support)", c: "#" }
                     ].map((item, idx) => (
                       <motion.div 
@@ -99,17 +102,17 @@ export default function Contact() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: idx * 0.1 }}
-                        className="flex gap-6 items-start p-6 rounded-3xl bg-slate-50 border border-gray-50 hover:shadow-xl transition-all group"
+                        className="flex gap-4 items-center p-4 rounded-2xl bg-slate-50 border border-gray-50 hover:shadow-md transition-all group"
                       >
-                         <div className="w-14 h-14 rounded-2xl bg-white text-[#3EA9D8] flex items-center justify-center shrink-0 shadow-sm group-hover:bg-[#3EA9D8] group-hover:text-white transition-colors">
-                            <item.icon size={26} />
+                         <div className="w-12 h-12 rounded-xl bg-white text-[#3EA9D8] flex items-center justify-center shrink-0 shadow-sm group-hover:bg-[#3EA9D8] group-hover:text-white transition-colors">
+                            <item.icon size={22} />
                          </div>
                          <div>
-                            <h4 className="font-black text-[#1D1860] text-sm uppercase tracking-wider mb-2 leading-none">{item.t}</h4>
-                            <p className="text-gray-500 text-xs font-semibold leading-relaxed mb-3">{item.d}</p>
+                            <h4 className="font-black text-[#1D1860] text-[13px] uppercase tracking-wider mb-1 leading-none">{item.t}</h4>
+                            <p className="text-gray-500 text-xs font-semibold leading-relaxed">{item.d}</p>
                             {item.c !== "#" && (
-                               <a href={item.c} className="text-[#3EA9D8] font-black text-[10px] tracking-widest uppercase flex items-center hover:scale-105 transition-transform origin-left">
-                                  Connect Now <MoveRight className="ml-2 w-4 h-4" />
+                               <a href={item.c} className="text-[#3EA9D8] font-black text-[10px] tracking-widest uppercase flex items-center hover:scale-105 transition-transform origin-left mt-1.5">
+                                  Connect Now <MoveRight className="ml-2 w-3 h-3" />
                                </a>
                             )}
                          </div>

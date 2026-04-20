@@ -23,8 +23,16 @@ body {
   .animate-shine {
     animation: shine 1.5s infinite;
   }
+  .animate-logo-scroll {
+    animation: logo-scroll 28s linear infinite;
+  }
 }
 
 @keyframes shine {
   100% { left: 125%; }
+}
+
+@keyframes logo-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }

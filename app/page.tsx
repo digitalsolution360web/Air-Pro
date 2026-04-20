@@ -100,10 +100,10 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col w-full min-h-screen font-sans bg-white overflow-x-hidden">
+    <div className="flex flex-col w-full  font-sans bg-white overflow-x-hidden">
 
       {/* 1. Hero Section */}
-      <section className="relative w-full pt-16 pb-8 lg:pt-24 lg:pb-12 overflow-hidden min-h-[400px] md:min-h-[500px] lg:min-h-[550px] flex items-center bg-black">
+      <section className="relative w-full pt-20 pb-16 lg:pt-32 lg:pb-24 overflow-hidden min-h-[550px] md:min-h-[650px] lg:min-h-[750px] flex items-center bg-black">
 
         {/* Background Image Slider */}
         <AnimatePresence mode="popLayout">
@@ -235,6 +235,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 2.25 Professional Statistics */}
+      <section className="py-12 bg-[#06041A] relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 divide-x-0 lg:divide-x divide-white/10">
+            {[
+              { icon: Award, to: 27, label: "Years Experience" },
+              { icon: Users, to: 135, label: "Team Members" },
+              { icon: Heart, to: 957, label: "Happy Clients" },
+              { icon: Truck, to: 1839, label: "Cargo Tracking" }
+            ].map((stat, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="flex flex-col items-center text-center p-6"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-white mb-6 border border-white/10">
+                  <stat.icon size={28} />
+                </div>
+                <div className="text-3xl md:text-4xl font-black text-[#FF5722] mb-2 font-mono">
+                  <CounterValue to={stat.to} />
+                  {stat.to === 27 && "+"}
+                </div>
+                <p className="text-white font-bold text-sm md:text-base uppercase tracking-widest opacity-80">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+        {/* Background Gradients */}
+        <div className="absolute top-0 right-0 w-[500px] h-full bg-[#3EA9D8]/5 blur-[120px] -z-10"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-full bg-orange-500/5 blur-[120px] -z-10"></div>
+      </section>
+
       {/* 2.5 Why Choose Us Section */}
       <section className="py-16 bg-[#e8f0f7] overflow-hidden border-y border-[#3EA9D8]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -264,6 +299,170 @@ export default function Home() {
                 <p className="text-gray-500 text-sm leading-relaxed font-medium">{item.desc}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: Comprehensive Logistics & Services Overview with User-Specific Headings */}
+      <section className="py-16 bg-white overflow-hidden border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-16 items-start">
+
+            {/* Left Column: Company Overview & Key Highlights & Services */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex-1"
+            >
+              <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[10px] mb-3 block">Corporate Profile</span>
+              <h3 id="company-overview" className="text-2xl md:text-3xl font-black text-[#1D1860] mb-6">
+                Company Overview
+              </h3>
+              <p className="text-gray-600 text-base leading-relaxed mb-10 font-medium">
+                Deb Air Express is a professionally managed logistics and transportation company delivering fast, reliable, and customised supply chain solutions across India. As a relatively small but highly involved company, we take great pride in our customer service, personal attention, and long-standing client relationships. With our people present across most major regions, we stay connected and involved at every stage of the logistics process.
+              </p>
+
+              {/* Key Business Highlights */}
+              <div className="mb-10 bg-slate-50 p-6 md:p-8 rounded-3xl border border-gray-100 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#3EA9D8]/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
+                <h4 className="text-xl font-black text-[#1D1860] mb-6 flex items-center gap-2">
+                  <div className="p-2 bg-white rounded-lg shadow-sm">
+                    <Award size={20} className="text-[#3EA9D8]" />
+                  </div>
+                  Key Business Highlights
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
+                  {[
+                    { label: "Company Name", value: "Deb Air Express" },
+                    { label: "Industry", value: "Logistics & Transportation" },
+                    { label: "Network", value: "Team presence across major regions in India" },
+                    { label: "Strength", value: "Fast delivery and high client involvement" }
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex flex-col">
+                      <span className="text-[10px] uppercase font-black tracking-widest text-[#3EA9D8] mb-1">{item.label}</span>
+                      <span className="text-sm font-bold text-[#1D1860]">{item.value}</span>
+                    </div>
+                  ))}
+                  <div className="sm:col-span-2 flex flex-col pt-2 border-t border-gray-100">
+                    <span className="text-[10px] uppercase font-black tracking-widest text-[#3EA9D8] mb-1">Core Expertise</span>
+                    <span className="text-sm font-bold text-[#1D1860]">Chemical, Liquid & Raw Material Transport (Rail & Road)</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Services Offered */}
+              <div className="space-y-4">
+                <h4 className="text-xl font-black text-[#1D1860] mb-5 flex items-center gap-2">
+                  <div className="p-2 bg-white rounded-lg shadow-sm">
+                    <Truck size={20} className="text-[#3EA9D8]" />
+                  </div>
+                  Services Offered
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    "Fast Delivery Services (Pan-India)",
+                    "Chemical & Liquid Transportation via Railway",
+                    "Specialised Logistics for Pharmaceuticals",
+                    "Raw Material Transport for Factories & Manufacturers",
+                    "Full Truck Load (FTL) Road Transport",
+                    "Loading, Handling & Coordination Support",
+                    "Customised Logistics Solutions with Regional Support"
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-start text-sm text-gray-700 font-semibold gap-3 group">
+                      <div className="mt-0.5 bg-[#3EA9D8]/10 p-1.5 rounded-full text-[#3EA9D8] transition-colors group-hover:bg-[#3EA9D8] group-hover:text-white">
+                        <CheckCircle2 size={12} className="shrink-0" />
+                      </div>
+                      <span className="leading-snug">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Column: Industry Expertise & Why Choose Us */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="flex-1 w-full"
+            >
+              {/* Industry Expertise */}
+              <div className="mb-12">
+                <h3 className="text-xl font-black text-[#1D1860] mb-6 flex items-center">
+                  <div className="w-10 h-10 rounded-xl bg-[#3EA9D8] text-white flex items-center justify-center mr-4 shadow-lg">
+                    <Package size={20} />
+                  </div>
+                  Industry Expertise
+                </h3>
+                <p className="text-gray-500 text-sm mb-5 font-medium">We provide services across:</p>
+                <div className="flex flex-wrap gap-3">
+                  {[
+                    "Pharmaceuticals",
+                    "Chemicals",
+                    "Footwear & Retail",
+                    "FMCG",
+                    "Food & Alcohol Industry",
+                    "Manufacturing & Industrial Sectors"
+                  ].map((ind, i) => (
+                    <span key={i} className="px-5 py-3 bg-white text-[#1D1860] rounded-2xl font-bold text-xs md:text-sm border border-gray-200 shadow-sm hover:border-[#3EA9D8] hover:text-[#3EA9D8] transition-all transform hover:-translate-y-1">
+                      {ind}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Why Choose Deb Air Express */}
+              <div className="bg-[#0b0826] rounded-[2.5rem] p-8 md:p-12 text-white relative overflow-hidden shadow-2xl border border-white/5 group">
+                <div className="absolute top-0 right-0 w-80 h-80 bg-[#3EA9D8] rounded-full blur-[100px] opacity-10 -translate-y-1/2 translate-x-1/2 transition-opacity group-hover:opacity-20"></div>
+
+                <h3 className="text-2xl font-black mb-8 text-white tracking-wide flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center backdrop-blur-sm">
+                    <ShieldCheck className="text-[#3EA9D8]" size={24} />
+                  </div>
+                  Why Choose Deb Air Express
+                </h3>
+
+                <div className="space-y-4">
+                  {[
+                    { text: "Fast delivery is our core strength", isSub: false },
+                    { text: "Expertise in chemical & liquid rail & Road transport", isSub: false },
+                    { text: "Reliable rail and road network", isSub: false },
+                    { text: "Team presence in nearly every key area", isSub: false },
+                    { text: "Small-company advantage:", isSub: false },
+                    { text: "Direct owner involvement", isSub: true },
+                    { text: "Faster decision-making", isSub: true },
+                    { text: "Personal attention to every shipment", isSub: true },
+                    { text: "Strong customer relations", isSub: true },
+                    { text: "Transparent communication and billing", isSub: true },
+                    { text: "Highly flexible and customer-focused approach", isSub: true }
+                  ].map((point, pIdx) => (
+                    <div key={pIdx} className={`flex items-start text-sm md:text-[15px] ${point.isSub ? 'ml-8 text-gray-400 pl-5 border-l-2 border-[#3EA9D8]/20 py-1' : 'font-bold text-gray-100 py-0.5'}`}>
+                      {!point.isSub && (
+                        <div className="w-2 h-2 rounded-full bg-[#3EA9D8] mr-4 mt-2 shrink-0 shadow-[0_0_10px_rgba(62,169,216,0.6)]"></div>
+                      )}
+                      <span className="leading-relaxed">{point.text}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-10 pt-8 border-t border-white/10 flex items-center justify-between">
+                  <div className="flex -space-x-3">
+                    {[1, 2, 3, 4].map((i) => (
+                      <div key={i} className="w-10 h-10 rounded-full border-2 border-[#0b0826] bg-slate-800 flex items-center justify-center">
+                        <Users size={16} className="text-[#3EA9D8]" />
+                      </div>
+                    ))}
+                  </div>
+                  <div className="text-right">
+                    <div className="text-[#3EA9D8] font-black text-xl leading-none">957+</div>
+                    <div className="text-[10px] uppercase font-bold tracking-widest text-white/50">Trusted Partners</div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
           </div>
         </div>
       </section>
@@ -430,6 +629,141 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 4.55 Leadership / Operations Director Section */}
+      <section className="py-12 md:py-16 bg-[#f8fafc] relative">
+        <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Top Heading with Red Line Accents - Reduced margin */}
+          <div className="flex items-center justify-center mb-10 md:mb-14 relative">
+             <div className="h-[2px] bg-[#e3000f]/80 w-[20%] lg:w-[30%] hidden md:block absolute left-0 rounded-r-full"></div>
+             <h2 className="text-3xl md:text-4xl font-black text-[#1D1860] px-6 text-center tracking-tight">
+               Words That <span className="text-[#e3000f]">Guide Us</span>
+             </h2>
+             <div className="h-[2px] bg-[#e3000f]/80 w-[20%] lg:w-[30%] hidden md:block absolute right-0 rounded-l-full"></div>
+          </div>
+
+          <div className="relative max-w-5xl mx-auto">
+            
+            {/* Overlapping Image Container - Tighter overlap */}
+            <div className="md:absolute md:bottom-0 md:left-8 w-full md:w-[38%] px-6 md:px-0 relative z-20 flex justify-center md:block">
+              <div className="w-full max-w-[320px] h-[360px] sm:h-[400px] md:h-[420px] lg:h-[460px] relative rounded-t-xl md:rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.3)] overflow-hidden border-b-0 md:border-b-[3px] border-[#e3000f] transform md:-translate-y-6 bg-gray-100 z-30 mb-[-1.5rem] md:mb-0">
+                 <Image 
+                   src="/founder.jpeg"
+                   alt="Lalan Kumar Singh"
+                   fill
+                   priority
+                   sizes="(max-width: 768px) 100vw, 400px"
+                   className="object-cover object-[center_28%]"
+                 />
+              </div>
+            </div>
+
+            {/* Deep Blue Box - Compact Padding */}
+            <div className="bg-[#122b46] w-full shadow-2xl rounded-[1rem] flex flex-col md:flex-row relative z-10 min-h-[300px]">
+              
+              {/* Left Spacer for image overlap (Desktop) */}
+              <div className="hidden md:block w-[40%] shrink-0"></div>
+
+              {/* Text Area - Reduced Gaps */}
+              <div className="w-full md:w-[60%] p-8 pt-12 md:p-10 lg:p-12 flex flex-col justify-center">
+                
+                <div className="relative pl-4 md:pl-2">
+                  <span className="text-4xl lg:text-5xl text-white font-serif font-black opacity-80 absolute top-[-10px] left-[-15px]">“</span>
+                  <p className="text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-[1.6] mb-6 italic text-white tracking-wide">
+                    When you build something meaningful, it's people and their stories that move us forward. Ensuring seamless surface and air cargo movements across the nationwide multi-modal network.
+                  </p>
+                  <span className="text-4xl lg:text-5xl text-white font-serif font-black opacity-80 absolute bottom-[-20px] right-[10px]">”</span>
+                </div>
+                
+                <div className="mt-6 md:mt-8 pl-4 md:pl-2">
+                  <h3 className="text-xl md:text-2xl font-black text-[#e3000f] mb-1 tracking-tight">
+                    Lalan Kumar Singh
+                  </h3>
+                  <div className="text-white text-[10px] md:text-[11px] font-bold tracking-[0.15em] uppercase mb-6 pb-3 md:pb-4 inline-block w-[90%] md:w-[85%] border-b border-white/20">
+                    Operations Director
+                  </div>
+                  
+                  <div>
+                    <button className="bg-[#e3000f] text-white px-8 py-3 font-bold text-[11px] md:text-[12px] tracking-widest uppercase transition-all shadow-md hover:bg-[#cc000d] hover:-translate-y-0.5 hover:shadow-lg inline-block w-auto">
+                      STORIES THAT MOVE US
+                    </button>
+                  </div>
+                </div>
+                
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4.56 Our Esteemed Clients - Logo Auto Slider */}
+      <section className="py-8 md:py-12 bg-[#06041A] relative overflow-hidden">
+        {/* Background Glow */}
+        <div className="absolute top-0 left-1/4 w-[500px] h-[300px] bg-[#3EA9D8]/8 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[200px] bg-[#1D1860]/50 blur-[100px] rounded-full pointer-events-none" />
+
+        {/* Heading */}
+        <div className="text-center mb-6 md:mb-8 relative z-10">
+          <span className="text-[#3EA9D8] font-black tracking-[0.3em] uppercase text-[10px] mb-2 block">
+            Our Esteemed Clients
+          </span>
+          <h2 className="text-xl md:text-2xl font-black text-white leading-tight">
+            Trusted by <span className="text-[#3EA9D8]">Industry Leaders</span>
+          </h2>
+          <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#3EA9D8] to-transparent mx-auto mt-3 rounded-full" />
+        </div>
+
+        {/* Slider Track */}
+        <div className="relative overflow-hidden group">
+          {/* Left / Right Fade Masks */}
+          <div className="absolute left-0 top-0 h-full w-24 md:w-40 bg-gradient-to-r from-[#06041A] to-transparent z-20 pointer-events-none" />
+          <div className="absolute right-0 top-0 h-full w-24 md:w-40 bg-gradient-to-l from-[#06041A] to-transparent z-20 pointer-events-none" />
+
+          {/* Scrolling Row — duplicated for seamless loop */}
+          <div className="flex gap-6 md:gap-10 animate-logo-scroll group-hover:[animation-play-state:paused]" style={{ width: 'max-content' }}>
+            {[
+              { img: "/Beam_Global_Spirits_Wine_Pvt_Ltd.png",  name: "Beam Global Spirits & Wine Pvt. Ltd." },
+              { img: "/Brown_For_Man_Pvt_Ltd..png",            name: "Brown For Man Pvt. Ltd." },
+              { img: "/Covestro_India_Pvt_Ltd.png",            name: "Covestro India Pvt. Ltd." },
+              { img: "/Jubilant_Ingrevia_Ltd.webp",            name: "Jubilant Ingrevia Ltd." },
+              { img: "/Vineeth_Precious_Catalysts _Pvt_Ltd.jpg", name: "Vineeth Precious Catalysts Pvt. Ltd." },
+              // Duplicate for seamless infinite loop
+              { img: "/Beam_Global_Spirits_Wine_Pvt_Ltd.png",  name: "Beam Global Spirits & Wine Pvt. Ltd." },
+              { img: "/Brown_For_Man_Pvt_Ltd..png",            name: "Brown For Man Pvt. Ltd." },
+              { img: "/Covestro_India_Pvt_Ltd.png",            name: "Covestro India Pvt. Ltd." },
+              { img: "/Jubilant_Ingrevia_Ltd.webp",            name: "Jubilant Ingrevia Ltd." },
+              { img: "/Vineeth_Precious_Catalysts _Pvt_Ltd.jpg", name: "Vineeth Precious Catalysts Pvt. Ltd." },
+            ].map((client, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col items-center gap-3 min-w-[170px] md:min-w-[190px] group/card"
+              >
+                {/* Logo Card */}
+                <div className="w-[170px] h-[100px] md:w-[190px] md:h-[110px] bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center p-4 backdrop-blur-sm shadow-[0_4px_30px_rgba(0,0,0,0.3)] transition-all duration-300 group-hover/card:border-[#3EA9D8]/50 group-hover/card:bg-white/10 group-hover/card:shadow-[0_0_25px_rgba(62,169,216,0.15)]">
+                  <Image
+                    src={client.img}
+                    alt={client.name}
+                    width={140}
+                    height={75}
+                    className="object-contain max-h-[70px] filter brightness-90 group-hover/card:brightness-110 transition-all duration-300"
+                  />
+                </div>
+                {/* Company Name */}
+                <p className="text-center text-white/70 text-[10px] md:text-[11px] font-semibold tracking-wide leading-snug max-w-[160px] group-hover/card:text-[#3EA9D8] transition-colors duration-300">
+                  {client.name}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom tagline */}
+        <p className="text-center text-white/30 text-[10px] font-medium tracking-widest uppercase mt-6 relative z-10">
+          Delivering Excellence Across Industries
+        </p>
+      </section>
+
       {/* 4.6 Store Locator / Map Section */}
       <section className="py-16 bg-[#eaeff5] border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -452,40 +786,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Professional Statistics */}
-      <section className="py-12 bg-[#06041A] relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 divide-x-0 lg:divide-x divide-white/10">
-            {[
-              { icon: Award, to: 27, label: "Years Experience" },
-              { icon: Users, to: 135, label: "Team Members" },
-              { icon: Heart, to: 957, label: "Happy Clients" },
-              { icon: Truck, to: 1839, label: "Cargo Tracking" }
-            ].map((stat, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="flex flex-col items-center text-center p-6"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-white mb-6 border border-white/10">
-                  <stat.icon size={28} />
-                </div>
-                <div className="text-3xl md:text-4xl font-black text-[#FF5722] mb-2 font-mono">
-                  <CounterValue to={stat.to} />
-                  {stat.to === 27 && "+"}
-                </div>
-                <p className="text-white font-bold text-sm md:text-base uppercase tracking-widest opacity-80">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-        {/* Background Gradients */}
-        <div className="absolute top-0 right-0 w-[500px] h-full bg-[#3EA9D8]/5 blur-[120px] -z-10"></div>
-        <div className="absolute bottom-0 left-0 w-[500px] h-full bg-orange-500/5 blur-[120px] -z-10"></div>
-      </section>
+
 
       {/* 6. Final CTA Section */}
       <section className="py-12 relative bg-white">

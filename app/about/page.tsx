@@ -81,14 +81,14 @@ export default function About() {
             variants={fadeInUp}
             className="max-w-3xl mx-auto lg:mx-0"
           >
-             <div className="inline-flex items-center bg-[#3EA9D8]/10 backdrop-blur-md border border-[#3EA9D8]/20 px-3 py-1 rounded-full text-[#3EA9D8] text-[8px] font-black tracking-[0.2em] uppercase mb-4 shadow-xl">
+             <div className="inline-flex items-center bg-[#3EA9D8]/10 backdrop-blur-md border border-[#3EA9D8]/20 px-4 py-2 rounded-full text-[#3EA9D8] text-xs font-black tracking-widest uppercase mb-4 shadow-xl">
                Engineering Indian Logistics Excellence Since 1995
              </div>
-             <h1 className="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-4 leading-tight tracking-tight uppercase">
+             <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-5 leading-tight tracking-tight">
                Precision-Driven <br/>
                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3EA9D8] to-blue-400">Logistics DNA</span>
              </h1>
-             <p className="text-gray-400 text-sm md:text-base font-medium max-w-xl leading-relaxed italic border-l-2 border-[#3EA9D8]/50 pl-4 py-1 mx-auto lg:mx-0">
+             <p className="text-gray-300 text-base md:text-lg font-medium max-w-xl leading-relaxed border-l-4 border-[#3EA9D8]/60 pl-5 py-1 mx-auto lg:mx-0">
                Over 27 years of engineering reliability and sustainable movement across 28 states with industrial-grade precision.
              </p>
           </motion.div>
@@ -128,15 +128,15 @@ export default function About() {
               viewport={{ once: true }}
               className="flex-1"
             >
-              <span className="text-[#3EA9D8] font-black tracking-[0.3em] uppercase text-[8px] mb-4 block underline underline-offset-4 decoration-2 decoration-[#3EA9D8]/20">Legacy & Values</span>
-              <h2 className="text-xl md:text-3xl font-black text-[#1D1860] mb-6 leading-tight tracking-tight uppercase group cursor-default">
-                Deb Air Express: <br/> Faster, Greener, <span className="text-[#3EA9D8] group-hover:underline underline-offset-4 transition-all">Smarter</span>.
+              <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-xs mb-4 block">Legacy & Values</span>
+              <h2 className="text-2xl md:text-3xl font-black text-[#1D1860] mb-6 leading-tight">
+                Deb Air Express: <br/> Faster, Greener, <span className="text-[#3EA9D8]">Smarter</span>.
               </h2>
-              <div className="space-y-4 text-gray-500 font-medium text-xs md:text-sm leading-relaxed lg:pr-8">
+              <div className="space-y-4 text-gray-600 font-medium text-sm md:text-base leading-relaxed lg:pr-8">
                 <p>
-                  At Deb Air Express, we believe that logistics is about trust. Founded in 1995, we've transformed the Indian logistics landscape by prioritizing clinical precision over mere delivery. 
+                  At Deb Air Express, we believe that logistics is about trust. Founded in 1995, we've transformed the Indian logistics landscape by prioritizing clinical precision over mere delivery.
                 </p>
-                <p className="bg-slate-50 p-4 rounded-xl italic border-l-2 border-[#3EA9D8] text-[#1D1860]">
+                <p className="bg-slate-50 p-5 rounded-xl italic border-l-4 border-[#3EA9D8] text-[#1D1860] text-sm md:text-base">
                   "We pioneered the shift to 100% CNG-fueled fleets and expanded into multi-modal railway integrations to ensure that our operations are both efficient and environmentally responsible."
                 </p>
                 <p>
@@ -151,13 +151,13 @@ export default function About() {
                    { i: Zap, t: "Real-time", l: "GPS Tracking" },
                    { i: Database, t: "Secured", l: "Warehousing" }
                  ].map((box, idx) => (
-                    <div key={idx} className="flex items-start gap-2.5 p-3 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-all">
-                       <div className="w-7 h-7 rounded-lg bg-blue-50 flex items-center justify-center text-[#3EA9D8] shrink-0">
-                          <box.i size={14} />
+                    <div key={idx} className="flex items-start gap-3 p-4 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-all">
+                       <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-[#3EA9D8] shrink-0">
+                          <box.i size={18} />
                        </div>
                        <div>
-                          <div className="text-xs font-black text-[#1D1860] leading-none mb-1">{box.t}</div>
-                          <div className="text-gray-400 text-[7px] font-bold uppercase tracking-widest leading-none">{box.l}</div>
+                          <div className="text-sm font-black text-[#1D1860] mb-0.5">{box.t}</div>
+                          <div className="text-gray-500 text-xs font-bold uppercase tracking-widest">{box.l}</div>
                        </div>
                     </div>
                  ))}
@@ -167,12 +167,161 @@ export default function About() {
         </div>
       </section>
 
+      {/* NEW: Vision & Mission Section */}
+      <section className="py-16 bg-[#06041A] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
+            <div className="bg-[#1D1860]/40 p-8 md:p-10 rounded-3xl border border-white/10 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#3EA9D8]/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
+              <h3 className="text-xl md:text-2xl font-black mb-6 text-[#3EA9D8] uppercase flex items-center gap-3">
+                <Globe size={24} /> Vision
+              </h3>
+              <p className="text-sm md:text-base font-medium leading-relaxed opacity-90">
+                To be recognised as a trusted logistics partner known for speed, reliability, and exceptional customer relationships.
+              </p>
+            </div>
+            <div className="bg-[#1D1860]/40 p-8 md:p-10 rounded-3xl border border-white/10 relative overflow-hidden">
+               <div className="absolute top-0 right-0 w-32 h-32 bg-[#3EA9D8]/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
+               <h3 className="text-xl md:text-2xl font-black mb-6 text-[#3EA9D8] uppercase flex items-center gap-3">
+                <Users size={24} /> Mission
+              </h3>
+              <ul className="space-y-3">
+                {[
+                  "To deliver shipments safely, efficiently, and on time",
+                  "To build long-term partnerships through transparency and strong communication",
+                  "To continuously upgrade technology and processes",
+                  "To provide personalised, flexible logistics solutions supported by owner-level involvement"
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start text-sm md:text-base font-medium opacity-90">
+                    <CheckCircle2 size={16} className="text-[#3EA9D8] shrink-0 mr-3 mt-1" />
+                    <span className="leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: Infrastructure & Compliance Section */}
+      <section className="py-16 bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            {/* Infrastructure & Resources */}
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-[#3EA9D8] text-white flex items-center justify-center shadow-lg">
+                   <Truck size={20} />
+                </div>
+                <h3 className="text-xl md:text-2xl font-black text-[#1D1860] uppercase">Infrastructure & Resources</h3>
+              </div>
+              <ul className="space-y-4">
+                {[
+                  "Rail partners for bulk and chemical transport",
+                  "GPS-enabled fleets",
+                  "Skilled drivers & handlers",
+                  "24×7 communication and coordination"
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-center text-sm md:text-base font-semibold text-gray-700 bg-slate-50 p-4 rounded-xl border border-gray-100 transition-all hover:border-[#3EA9D8]/50 hover:shadow-md">
+                    <div className="w-2 h-2 rounded-full bg-[#3EA9D8] mr-4 shrink-0 shadow-[0_0_8px_rgba(62,169,216,0.6)]"></div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Compliance & Certifications */}
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-[#1D1860] text-white flex items-center justify-center shadow-lg">
+                   <ShieldCheck size={20} />
+                </div>
+                <h3 className="text-xl md:text-2xl font-black text-[#1D1860] uppercase">Compliance & Certifications</h3>
+              </div>
+              <ul className="space-y-4">
+                {[
+                  "GST Registered",
+                  "MSME Registered",
+                  "Compliant with chemical handling & transportation norms",
+                  "Vehicles follow required safety standards"
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-center text-sm md:text-base font-semibold text-gray-700 bg-slate-50 p-4 rounded-xl border border-gray-100 transition-all hover:border-[#1D1860]/50 hover:shadow-md">
+                    <Award size={18} className="text-[#1D1860] mr-4 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: Major Clients & Key Deliveries */}
+      <section className="py-16 bg-[#f4f9fc] border-b border-[#3EA9D8]/10 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Key Deliveries First for Impact */}
+          <div className="mb-16">
+             <div className="text-center mb-10">
+                <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[10px] mb-2 block">Proven Track Record</span>
+                <h3 className="text-xl md:text-2xl md:text-3xl font-black text-[#1D1860] uppercase">Key Client Deliveries</h3>
+             </div>
+             
+             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {[
+                  { client: "Khadim’s", desc: "We manage raw material supply via railway from Haryana to Kolkata within 24 hours, ensuring timely manufacturing operations." },
+                  { client: "Jubilant", desc: "We handle chemical and liquid consignments, ensuring safe, compliant, and timely movement for pharma production needs." },
+                  { client: "Beam Global & Brown-Forman", desc: "Deb Air Express has delivered consignments for these leading alcohol brands, maintaining secure and timely transportation standards." }
+                ].map((delivery, i) => (
+                  <div key={i} className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm relative overflow-hidden group hover:shadow-xl transition-all">
+                     <div className="absolute top-0 inset-x-0 h-1 bg-[#3EA9D8] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                     <div className="text-[#3EA9D8] mb-4">
+                        <Briefcase size={28} />
+                     </div>
+                     <h4 className="text-lg font-black text-[#1D1860] mb-3">{delivery.client}</h4>
+                     <p className="text-gray-500 text-sm font-medium leading-relaxed">{delivery.desc}</p>
+                  </div>
+                ))}
+             </div>
+          </div>
+
+          {/* Major Clients Grid */}
+          <div>
+            <div className="text-center mb-10">
+               <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[10px] mb-2 block">Trusted By Industry Leaders</span>
+               <h3 className="text-xl md:text-2xl font-black text-[#1D1860] uppercase">Major Clients</h3>
+               <p className="text-gray-500 font-medium text-sm mt-3">Deb Air Express proudly works with top companies such as:</p>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-3">
+              {[
+                "M/S Jubilant Ingrevia Ltd.", "M/S Brown For Man Pvt. Ltd.", "M/s Beam Global Spirits & Wine (India) Pvt. Ltd",
+                "M/S Khadim’s India Limited", "M/S Covestro India Pvt. Ltd.", "M/s Vineeth Precious Catalysts Pvt. Ltd.", 
+                "M/S Kreative Organics Pvt. Ltd.", "M/s Adyati Marketing Services Pvt. Ltd.", "M/s Weaver Brands. Vaisa",
+                "M/s Srini Pharmaceuticals Ltd. Telangana", "M/s shreepati pharmaceuticals private limited. Indore", "M/s, Atharva Laboratories Ltd.",
+                "M/s Toyo Ink India Pvt. Ltd. Noida", "M/s, Phooltas Rail Solutions Pvt. Ltd.", "M/s, Ancadd Engineering Solutions.",
+                "M/s, Nippon Paint (India) Pvt. Ltd.", "M/s, Expanded Polymer Ltd.", "M/s, Clariant Chemical India Ltd.",
+                "M/s Helios Packaging Pvt. Ltd. Neemrana (Fog)", "M/s ONS Industries Pvt. Ltd.", "M/s Paragon Polymer Product Pvt. Ltd.",
+                "M/s BASF India Limited", "M/s Global Footwear And Leathecraft Industries", "M/s Chemilac Paints Pvt. Ltd. Faridabad",
+                "M/S Synergy Footwear Components", "M/s. Aroma Chemical Agencies (I) Pvt. Ltd.", "M/s Bhabha Atomic Research Center", 
+                "M/s AVC Systems Solutions Pvt. Ltd."
+              ].map((client, idx) => (
+                <div key={idx} className="bg-white px-5 py-3 rounded-full border border-gray-200 shadow-sm text-xs md:text-sm font-bold text-[#1D1860] hover:border-[#3EA9D8] hover:text-[#3EA9D8] transition-colors whitespace-nowrap cursor-default">
+                  {client}
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* 3. NEW: Specialized Capacities Section — High Value Extra Content */}
       <section className="py-16 bg-[#f4f9fc] border-y border-[#3EA9D8]/10 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="text-center mb-10">
-              <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[8px] mb-2 block">Premium Capabilities</span>
-              <h3 className="text-xl md:text-2xl font-black text-[#1D1860] uppercase">Industrial Standard Handling</h3>
+              <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-xs mb-2 block">Premium Capabilities</span>
+              <h3 className="text-2xl md:text-3xl font-black text-[#1D1860]">Industrial Standard Handling</h3>
            </div>
 
            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -193,13 +342,13 @@ export default function About() {
                   label: "Compliance Ready" 
                 }
               ].map((cap, i) => (
-                <div key={i} className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all group">
-                   <div className="w-10 h-10 rounded-xl bg-[#3EA9D8] text-white flex items-center justify-center mb-4 shadow-lg group-hover:rotate-12 transition-transform">
-                      <cap.i size={20} />
+                <div key={i} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all group">
+                   <div className="w-12 h-12 rounded-xl bg-[#3EA9D8] text-white flex items-center justify-center mb-5 shadow-lg group-hover:rotate-12 transition-transform">
+                      <cap.i size={24} />
                    </div>
-                   <h6 className="text-[7px] font-black text-[#3EA9D8] uppercase tracking-[0.2em] mb-2">{cap.label}</h6>
-                   <h5 className="text-base font-black text-[#1D1860] mb-3 uppercase tracking-tight">{cap.t}</h5>
-                   <p className="text-gray-400 text-xs font-semibold leading-relaxed line-clamp-3">{cap.d}</p>
+                   <p className="text-xs font-black text-[#3EA9D8] uppercase tracking-widest mb-2">{cap.label}</p>
+                   <h5 className="text-lg font-black text-[#1D1860] mb-3">{cap.t}</h5>
+                   <p className="text-gray-500 text-sm font-medium leading-relaxed">{cap.d}</p>
                 </div>
               ))}
            </div>
@@ -211,10 +360,10 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="flex flex-col lg:flex-row justify-between lg:items-end gap-6 mb-10">
               <div className="max-w-2xl">
-                 <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[8px] mb-2 block p-1.5 bg-blue-50 w-fit rounded-lg">Operational Reach</span>
-                 <h3 className="text-xl md:text-2xl font-black text-[#1D1860] leading-tight uppercase">Strategic Network Centers</h3>
+                 <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-xs mb-2 block">Operational Reach</span>
+                 <h3 className="text-2xl md:text-3xl font-black text-[#1D1860]">Strategic Network Centers</h3>
               </div>
-              <p className="text-gray-400 font-bold max-w-sm text-[10px] uppercase opacity-60">
+              <p className="text-gray-500 font-semibold max-w-sm text-sm">
                 24/7 cross-docking operations at the heart of India's commercial corridors.
               </p>
            </div>
@@ -227,12 +376,12 @@ export default function About() {
                 { r: "East India", h: "Kolkata", d: "Critical gateway for Eastern trade routes." }
               ].map((hub, i) => (
                 <div key={i} className="bg-slate-50 p-6 rounded-2xl border border-gray-50 hover:bg-white hover:shadow-lg transition-all group">
-                   <div className="w-8 h-8 rounded-lg bg-white shadow-sm flex items-center justify-center mb-4 text-[#3EA9D8] group-hover:bg-[#1D1860] group-hover:text-white transition-all">
-                      <MapPin size={16} />
+                   <div className="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center mb-4 text-[#3EA9D8] group-hover:bg-[#1D1860] group-hover:text-white transition-all">
+                      <MapPin size={20} />
                    </div>
-                   <h6 className="text-[#3EA9D8] font-black text-[7px] tracking-widest uppercase mb-1">{hub.r}</h6>
-                   <h5 className="text-sm font-black text-[#1D1860] mb-2">{hub.h}</h5>
-                   <p className="text-gray-400 text-[10px] font-bold leading-none">{hub.d}</p>
+                   <p className="text-[#3EA9D8] font-black text-xs tracking-widest uppercase mb-1">{hub.r}</p>
+                   <h5 className="text-base font-black text-[#1D1860] mb-2">{hub.h}</h5>
+                   <p className="text-gray-500 text-sm font-medium leading-snug">{hub.d}</p>
                 </div>
               ))}
            </div>
@@ -243,7 +392,8 @@ export default function About() {
       <section className="py-16 bg-[#f4f9fc] border-y border-[#3EA9D8]/10 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="text-center mb-12">
-              <h3 className="text-xl md:text-2xl font-black text-[#1D1860] uppercase underline underline-offset-8 decoration-[#3EA9D8]/50 inline-block px-8 py-2">Corporate Journey</h3>
+              <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-xs mb-2 block">Our History</span>
+              <h3 className="text-2xl md:text-3xl font-black text-[#1D1860]">Corporate Journey</h3>
            </div>
 
            <div className="relative">
@@ -259,14 +409,14 @@ export default function About() {
                       transition={{ delay: idx * 0.1 }}
                       className={`relative flex flex-col ${idx % 2 !== 0 ? 'lg:translate-y-16' : ''}`}
                     >
-                       <div className={`bg-white p-6 lg:p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all group ${idx % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
-                          <div className={`text-[#3EA9D8] font-black text-2xl mb-2 transition-transform flex items-center gap-3 ${idx % 2 === 0 ? 'lg:justify-end' : 'lg:justify-start'}`}>
+                       <div className={`bg-white p-7 lg:p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all group ${idx % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
+                          <div className={`text-[#3EA9D8] font-black text-3xl mb-3 flex items-center gap-3 ${idx % 2 === 0 ? 'lg:justify-end' : 'lg:justify-start'}`}>
                              {ms.year}
                           </div>
-                          <h4 className="text-base font-black text-[#1D1860] mb-2 uppercase">{ms.title}</h4>
-                          <p className="text-gray-500 font-medium text-[11px] leading-relaxed line-clamp-2">{ms.desc}</p>
+                          <h4 className="text-lg font-black text-[#1D1860] mb-3">{ms.title}</h4>
+                          <p className="text-gray-500 font-medium text-sm leading-relaxed">{ms.desc}</p>
                        </div>
-                       <div className="absolute left-1/2 top-8 w-2.5 h-2.5 rounded-full bg-[#3EA9D8] -translate-x-1/2 border-2 border-white shadow-lg hidden lg:block"></div>
+                       <div className="absolute left-1/2 top-8 w-3 h-3 rounded-full bg-[#3EA9D8] -translate-x-1/2 border-2 border-white shadow-lg hidden lg:block"></div>
                     </motion.div>
                  ))}
               </div>
@@ -277,23 +427,27 @@ export default function About() {
       </section>
 
       {/* 6. Core Operational Pillars — More specific descriptors */}
-      <section className="py-12 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+          <div className="text-center mb-10">
+            <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-xs mb-2 block">Our Values</span>
+            <h3 className="text-2xl md:text-3xl font-black text-[#1D1860]">Core Operational Pillars</h3>
+          </div>
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { i: Leaf, t: "Green Commitment", d: "Utilizing CNG-optimized fleet routing systems." },
-                { i: ShieldCheck, t: "Seal Security", d: "Proprietary tamper-evident cargo sealing." },
-                { i: Clock, t: "ETA Precision", d: "99.8% record of meeting strict delivery windows." },
-                { i: Search, t: "Cloud Visibility", d: "Real-time API access for enterprise tracking." },
-                { i: BarChart3, t: "Elastic Capacity", d: "Specialized in sub-100kg to 10-ton solutions." },
-                { i: Heart, t: "Ethics & Care", d: "Dignity-led handling for personal high-value parcels." }
+                { i: Leaf, t: "Green Commitment", d: "Utilizing CNG-optimized fleet routing systems for a greener future." },
+                { i: ShieldCheck, t: "Seal Security", d: "Proprietary tamper-evident cargo sealing at every stage." },
+                { i: Clock, t: "ETA Precision", d: "99.8% record of meeting strict delivery windows on-time." },
+                { i: Search, t: "Cloud Visibility", d: "Real-time API access for enterprise-level shipment tracking." },
+                { i: BarChart3, t: "Elastic Capacity", d: "Specialized in sub-100kg to 10-ton logistics solutions." },
+                { i: Heart, t: "Ethics & Care", d: "Dignity-led handling for personal and high-value parcels." }
               ].map((val, idx) => (
-                <div key={idx} className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-all group border-b-2 border-b-gray-50 hover:border-b-[#3EA9D8]">
-                   <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#3EA9D8] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                      <val.i size={18} />
+                <div key={idx} className="p-7 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all group hover:border-[#3EA9D8]/30">
+                   <div className="w-12 h-12 rounded-xl bg-blue-50 text-[#3EA9D8] flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-[#3EA9D8] group-hover:text-white transition-all">
+                      <val.i size={22} />
                    </div>
-                   <h5 className="text-xs font-black text-[#1D1860] mb-2 uppercase tracking-tighter">{val.t}</h5>
-                   <p className="text-gray-400 text-[9px] font-bold leading-normal uppercase opacity-70">{val.d}</p>
+                   <h5 className="text-base font-black text-[#1D1860] mb-2">{val.t}</h5>
+                   <p className="text-gray-500 text-sm font-medium leading-relaxed">{val.d}</p>
                 </div>
               ))}
            </div>
@@ -301,15 +455,15 @@ export default function About() {
       </section>
 
       {/* 7. Statistics Recap */}
-      <section className="py-10 bg-[#06041A] relative">
+      <section className="py-14 bg-[#06041A] relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, idx) => (
               <div key={idx} className="text-center">
-                <div className="text-2xl md:text-4xl font-black text-white mb-1">
+                <div className="text-4xl md:text-5xl font-black text-white mb-2">
                    <CounterValue to={stat.to} />{idx === 0 ? '' : '+'}
                 </div>
-                <div className="text-[#3EA9D8] font-black text-[7px] uppercase tracking-[0.2em]">{stat.label}</div>
+                <div className="text-[#3EA9D8] font-black text-sm uppercase tracking-widest">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -317,20 +471,21 @@ export default function About() {
       </section>
 
       {/* 8. Tighter Strategic CTA */}
-      <section className="py-12 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-           <div className="relative bg-[#06041A] rounded-[2.5rem] p-10 md:p-14 text-center text-white shadow-2xl overflow-hidden border border-[#3EA9D8]/10 group">
+           <div className="relative bg-[#06041A] rounded-[2.5rem] p-10 md:p-16 text-center text-white shadow-2xl overflow-hidden border border-[#3EA9D8]/10">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-[#3EA9D8]/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
               <div className="relative z-10 max-w-2xl mx-auto">
-                 <h2 className="text-xl md:text-3xl font-black mb-6 leading-tight uppercase underline underline-offset-[10px] decoration-[#3EA9D8]/30">Partner with Excellence</h2>
-                 <p className="text-gray-400 font-medium mb-8 text-xs md:text-sm opacity-80 max-w-xl mx-auto italic">
+                 <h2 className="text-2xl md:text-4xl font-black mb-6 leading-tight">Partner with <span className="text-[#3EA9D8]">Excellence</span></h2>
+                 <p className="text-gray-300 font-medium mb-10 text-base opacity-90 max-w-xl mx-auto">
                    Join 900+ businesses who rely on Deb Air Express for mission-critical and eco-friendly logistics across India.
                  </p>
                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Link href="/contact" className="bg-[#3EA9D8] hover:bg-white hover:text-[#06041A] text-white px-8 py-4 rounded-xl font-black text-xs transition-all shadow-xl flex items-center justify-center uppercase tracking-widest">
-                       Contact Expert <MoveRight className="ml-2 w-4 h-4" />
+                    <Link href="/contact" className="bg-[#3EA9D8] hover:bg-white hover:text-[#06041A] text-white px-8 py-4 rounded-xl font-bold text-base transition-all shadow-xl flex items-center justify-center">
+                       Contact Expert <MoveRight className="ml-2 w-5 h-5" />
                     </Link>
-                    <a href="tel:+919811350228" className="bg-white/5 hover:bg-white/10 text-white px-8 py-4 rounded-xl font-black text-xs transition-all border border-white/10 flex items-center justify-center uppercase tracking-widest">
-                       Support Direct
+                    <a href="tel:+919311350228" className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-bold text-base transition-all border border-white/20 flex items-center justify-center">
+                       +91-9311350228
                     </a>
                  </div>
               </div>
