@@ -89,7 +89,7 @@ export default function Track() {
                initial="hidden"
                animate="visible"
                variants={fadeInUp}
-               className="text-gray-400 text-sm md:text-lg mb-10 max-w-xl font-medium opacity-80"
+               className="text-gray-100 text-sm md:text-lg mb-10 max-w-xl font-bold"
              >
                Access high-fidelity tracking data for your air and surface consignments. Enter your AWB or Reference number below.
              </motion.p>
@@ -149,7 +149,7 @@ export default function Track() {
                             <feature.icon size={28} />
                          </div>
                          <h3 className="text-xl font-black text-[#1D1860] mb-3">{feature.t}</h3>
-                         <p className="text-gray-500 text-sm font-medium leading-relaxed">{feature.d}</p>
+                         <p className="text-gray-700 text-sm font-bold leading-relaxed">{feature.d}</p>
                       </div>
                     ))}
                  </motion.div>
@@ -186,8 +186,8 @@ export default function Track() {
                                       {step.status.includes("Package") ? <Box size={20} /> : <Truck size={20} />}
                                    </div>
                                    <div>
-                                      <h4 className={`font-black text-sm uppercase tracking-widest ${step.active ? "text-white" : "text-white/30"}`}>{step.status}</h4>
-                                      <p className="text-gray-400 text-xs font-bold">{step.loc} | {step.time}</p>
+                                      <h4 className={`font-black text-sm uppercase tracking-widest ${step.active ? "text-white" : "text-white/50"}`}>{step.status}</h4>
+                                      <p className="text-gray-200 text-xs font-black">{step.loc} | {step.time}</p>
                                    </div>
                                 </div>
                              ))}
@@ -211,7 +211,7 @@ export default function Track() {
       {/* 3. Global Network Stats - Small Row */}
       <section className="py-12 bg-slate-50 border-y border-gray-100">
          <div className="max-w-7xl mx-auto px-4 text-center">
-            <p className="text-gray-400 font-black text-[10px] uppercase tracking-[0.3em] mb-4">Network Capability</p>
+            <p className="text-gray-600 font-black text-[10px] uppercase tracking-[0.3em] mb-4">Network Capability</p>
             <div className="flex flex-wrap justify-center gap-12 md:gap-24">
                <div>
                   <div className="text-2xl font-black text-[#1D1860]"><CounterValue to={19} />k+</div>

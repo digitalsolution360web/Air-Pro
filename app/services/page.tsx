@@ -12,13 +12,13 @@ import { motion } from "framer-motion";
 export default function Services() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { 
-        duration: 0.6, 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
         ease: "easeOut" as const
-      } 
+      }
     }
   };
 
@@ -95,7 +95,7 @@ export default function Services() {
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
-            className="text-gray-400 text-base md:text-xl font-medium max-w-2xl leading-relaxed mx-auto lg:mx-0"
+            className="text-gray-100 text-base md:text-xl font-bold max-w-2xl leading-relaxed mx-auto lg:mx-0"
           >
             Bridging distances with 27 years of expertise. From surface transport to dedicated hand-delivery, we move what matters most to your business.
           </motion.p>
@@ -131,7 +131,7 @@ export default function Services() {
                     </div>
                     <h3 className="text-2xl font-black text-[#1D1860] mb-4 leading-tight">{service.title}</h3>
                     <div className="h-1 w-12 bg-[#3EA9D8] rounded-full mb-6"></div>
-                    <p className="text-gray-500 text-sm font-medium leading-relaxed">{service.desc}</p>
+                    <p className="text-gray-800 text-sm font-bold leading-relaxed">{service.desc}</p>
                   </div>
                   <div className="flex items-center text-[#1D1860] font-black text-[10px] tracking-widest uppercase group-hover:text-[#3EA9D8]">
                     Hover to Expand <MoveRight className="ml-3 w-4 h-4 animate-pulse" />
@@ -185,7 +185,7 @@ export default function Services() {
           <div className="space-y-20">
             {/* Zig-Zag 1: Warehousing */}
             <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 group">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -194,9 +194,9 @@ export default function Services() {
               >
                 <div className="inline-block bg-[#1D1860]/5 text-[#1D1860] font-black px-4 py-1 rounded-lg text-[10px] tracking-widest uppercase mb-6">Sector 01</div>
                 <h3 className="text-3xl md:text-5xl font-black text-[#1D1860] mb-6 leading-[1.1] tracking-tight">
-                  Strategic <br/> <span className="text-[#3EA9D8]">Warehousing</span> & <br/> Smart Inventory
+                  Strategic <br /> <span className="text-[#3EA9D8]">Warehousing</span> & <br /> Smart Inventory
                 </h3>
-                <p className="text-gray-500 text-lg md:text-xl font-medium leading-relaxed mb-6 max-w-xl">
+                <p className="text-gray-800 text-lg md:text-xl font-bold leading-relaxed mb-6 max-w-xl">
                   Optimize your supply chain with our state-of-the-art warehousing facilities. We offer secure, climate-controlled storage integrated with real-time inventory tracking systems for maximum efficiency.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-8 mb-8">
@@ -211,7 +211,7 @@ export default function Services() {
                   Learn Operational Stack <MoveRight className="w-5 h-5 text-[#3EA9D8]" />
                 </button>
               </motion.div>
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -232,7 +232,7 @@ export default function Services() {
 
             {/* Zig-Zag 2: Cold Chain (Reversed) */}
             <div className="flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-24 group">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -241,9 +241,9 @@ export default function Services() {
               >
                 <div className="inline-block bg-[#3EA9D8]/10 text-[#3EA9D8] font-black px-4 py-1 rounded-lg text-[10px] tracking-widest uppercase mb-6">Sector 02</div>
                 <h3 className="text-3xl md:text-5xl font-black text-[#1D1860] mb-6 leading-[1.1] tracking-tight">
-                  Precision-Controlled <br/> <span className="text-[#3EA9D8]">Cold Chain</span> Logistics
+                  Precision-Controlled <br /> <span className="text-[#3EA9D8]">Cold Chain</span> Logistics
                 </h3>
-                <p className="text-gray-500 text-lg md:text-xl font-medium leading-relaxed mb-6 max-w-xl">
+                <p className="text-gray-800 text-lg md:text-xl font-bold leading-relaxed mb-6 max-w-xl">
                   Ensure the integrity of your temperature-sensitive goods. From pharmaceuticals to perishables, our specialized fleet maintains exact conditions from origin to destination across India.
                 </p>
                 <div className="space-y-4 mb-8">
@@ -257,7 +257,7 @@ export default function Services() {
                       </div>
                       <div>
                         <h4 className="font-black text-[#1D1860] text-sm uppercase tracking-tight mb-1">{item.t}</h4>
-                        <p className="text-gray-500 text-xs font-semibold leading-relaxed max-w-xs">{item.d}</p>
+                        <p className="text-gray-700 text-xs font-bold leading-relaxed max-w-xs">{item.d}</p>
                       </div>
                     </div>
                   ))}
@@ -266,7 +266,7 @@ export default function Services() {
                   Request specialized Quote
                 </Link>
               </motion.div>
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -282,7 +282,7 @@ export default function Services() {
 
             {/* Zig-Zag 3: E-commerce */}
             <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 group">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -291,26 +291,26 @@ export default function Services() {
               >
                 <div className="inline-block bg-[#1D1860]/5 text-[#1D1860] font-black px-4 py-1 rounded-lg text-[10px] tracking-widest uppercase mb-6">Sector 03</div>
                 <h3 className="text-3xl md:text-5xl font-black text-[#1D1860] mb-6 leading-[1.1] tracking-tight">
-                  Seamless <br/> <span className="text-[#3EA9D8]">E-commerce</span> & <br/> Last-Mile Delivery
+                  Seamless <br /> <span className="text-[#3EA9D8]">E-commerce</span> & <br /> Last-Mile Delivery
                 </h3>
-                <p className="text-gray-500 text-lg md:text-xl font-medium leading-relaxed mb-6 max-w-xl">
+                <p className="text-gray-800 text-lg md:text-xl font-bold leading-relaxed mb-6 max-w-xl">
                   Empower your online business with our scalable fulfillment solutions. We handle everything from picking and packing to lightning-fast last-mile delivery and effortless reverse logistics.
                 </p>
                 <div className="grid grid-cols-2 gap-8 mb-8">
                   <div>
                     <div className="text-4xl font-black text-[#3EA9D8] mb-2 tracking-tighter">24H</div>
-                    <div className="text-[#1D1860] font-black text-[10px] uppercase tracking-widest border-l-2 border-[#1D1860] pl-3">Standard<br/>Delivery Cycle</div>
+                    <div className="text-[#1D1860] font-black text-[10px] uppercase tracking-widest border-l-2 border-[#1D1860] pl-3">Standard<br />Delivery Cycle</div>
                   </div>
                   <div>
                     <div className="text-4xl font-black text-[#3EA9D8] mb-2 tracking-tighter">0%</div>
-                    <div className="text-[#1D1860] font-black text-[10px] uppercase tracking-widest border-l-2 border-[#1D1860] pl-3">Inventory<br/>Loss Rate</div>
+                    <div className="text-[#1D1860] font-black text-[10px] uppercase tracking-widest border-l-2 border-[#1D1860] pl-3">Inventory<br />Loss Rate</div>
                   </div>
                 </div>
                 <Link href="/contact" className="inline-flex items-center gap-4 text-[#3EA9D8] font-black text-xs tracking-[0.2em] uppercase border-b-2 border-[#3EA9D8]/20 pb-2 hover:border-[#3EA9D8] transition-all">
                   Scale your business <MoveRight className="w-5 h-5" />
                 </Link>
               </motion.div>
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -326,7 +326,7 @@ export default function Services() {
 
             {/* Zig-Zag 4: Project Cargo (Reversed) */}
             <div className="flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-24 group">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -335,9 +335,9 @@ export default function Services() {
               >
                 <div className="inline-block bg-[#1D1860]/5 text-[#1D1860] font-black px-4 py-1 rounded-lg text-[10px] tracking-widest uppercase mb-6">Sector 04</div>
                 <h3 className="text-3xl md:text-5xl font-black text-[#1D1860] mb-6 leading-[1.1] tracking-tight">
-                  Industrial <br/> <span className="text-[#3EA9D8]">Project Cargo</span> & <br/> Heavy Lift
+                  Industrial <br /> <span className="text-[#3EA9D8]">Project Cargo</span> & <br /> Heavy Lift
                 </h3>
-                <p className="text-gray-500 text-lg md:text-xl font-medium leading-relaxed mb-6 max-w-xl">
+                <p className="text-gray-800 text-lg md:text-xl font-bold leading-relaxed mb-6 max-w-xl">
                   Handling the complex with precision engineering. From over-dimensional industrial machinery to mission-critical infrastructure, we plan and execute the most challenging transport missions.
                 </p>
                 <div className="grid grid-cols-1 gap-y-3 mb-8">
@@ -359,7 +359,7 @@ export default function Services() {
                   View Case Studies <MoveRight className="w-5 h-5 text-[#3EA9D8]" />
                 </button>
               </motion.div>
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -367,7 +367,7 @@ export default function Services() {
                 className="flex-1 relative w-full aspect-square"
               >
                 <div className="relative w-full h-full rounded-[3rem] overflow-hidden shadow-[0_50px_100px_rgba(29,24,96,0.15)] ring-[20px] ring-gray-50 group-hover:ring-[#3EA9D8]/5 transition-all duration-700">
-                  <Image src="/b8.jpeg" alt="Project Cargo" fill className="object-cover scale-110 group-hover:scale-100 transition-transform duration-1000" />
+                  <Image src="/b5.jpeg" alt="Project Cargo" fill className="object-cover scale-110 group-hover:scale-100 transition-transform duration-1000" />
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#1D1860]/40 to-transparent"></div>
                 </div>
               </motion.div>
@@ -395,7 +395,7 @@ export default function Services() {
                       <adv.icon size={20} />
                     </div>
                     <h5 className="font-black text-[#1D1860] text-sm uppercase tracking-wider">{adv.t}</h5>
-                    <p className="text-gray-500 text-xs font-semibold leading-relaxed">{adv.d}</p>
+                    <p className="text-gray-800 text-xs font-bold leading-relaxed">{adv.d}</p>
                   </div>
                 ))}
               </div>
@@ -432,7 +432,7 @@ export default function Services() {
           >
             <div className="relative z-10 max-w-2xl mx-auto">
               <h2 className="text-2xl md:text-4xl font-black mb-8 leading-tight tracking-normal underline underline-offset-[12px] decoration-[#3EA9D8]/50">Need a Specialized Solution?</h2>
-              <p className="text-gray-400 font-medium mb-10 text-sm md:text-base opacity-90 italic">
+              <p className="text-gray-200 font-bold mb-10 text-sm md:text-base italic">
                 Contact our logistics engineers today for custom industrial frameworks and mission-critical shipments with personalized care.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">

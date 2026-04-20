@@ -23,8 +23,8 @@ export default function Team() {
     },
     {
       name: "Lalan Kumar Singh",
-      role: "Operations Director",
-      img: "/team1.jpg",
+      role: "Founder",
+      img: "/founder.jpeg",
       desc: "Ensuring seamless surface and air cargo movements across the nationwide multi-modal network.",
       socials: ["#", "#", "#"]
     },
@@ -96,7 +96,7 @@ export default function Team() {
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
-            className="text-gray-400 text-sm md:text-lg font-medium max-w-2xl mx-auto leading-relaxed"
+            className="text-gray-100 text-sm md:text-lg font-bold max-w-2xl mx-auto leading-relaxed"
           >
             Meet the leadership team dedicated to moving your business forward with precision, transparency, and 27 years of industrial excellence.
           </motion.p>
@@ -144,7 +144,7 @@ export default function Team() {
                   <span className="text-[#3EA9D8] font-black uppercase text-[10px] tracking-widest mb-3 block">{member.role}</span>
                   <h3 className="text-2xl font-black text-[#1D1860] mb-4">{member.name}</h3>
                   {member.desc && (
-                    <p className="text-gray-500 text-sm font-medium leading-relaxed italic opacity-80 max-w-[280px] mx-auto">
+                    <p className="text-gray-800 text-sm font-bold leading-relaxed italic max-w-[280px] mx-auto">
                       "{member.desc}"
                     </p>
                   )}
@@ -175,7 +175,7 @@ export default function Team() {
                 </div>
                 <div>
                   <h4 className="font-black text-[#1D1860] text-sm uppercase tracking-wider mb-2">{item.t}</h4>
-                  <p className="text-gray-500 text-xs font-semibold leading-relaxed">{item.d}</p>
+                  <p className="text-gray-800 text-xs font-bold leading-relaxed">{item.d}</p>
                 </div>
               </div>
             ))}
@@ -194,7 +194,7 @@ export default function Team() {
           >
             <div className="relative z-10 max-w-2xl mx-auto">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-6 leading-tight">Ready to Drive the Future of <br /> <span className="text-[#3EA9D8]">Indian Logistics?</span></h2>
-              <p className="text-gray-400 font-medium mb-10 text-sm md:text-base opacity-90 max-w-md mx-auto">
+              <p className="text-gray-100 font-bold mb-10 text-sm md:text-base max-w-md mx-auto">
                 We are always looking for passionate logistics experts to join our growing Pan-India network.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">

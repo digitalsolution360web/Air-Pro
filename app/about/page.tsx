@@ -88,7 +88,7 @@ export default function About() {
                Precision-Driven <br/>
                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3EA9D8] to-blue-400">Logistics DNA</span>
              </h1>
-             <p className="text-gray-300 text-base md:text-lg font-medium max-w-xl leading-relaxed border-l-4 border-[#3EA9D8]/60 pl-5 py-1 mx-auto lg:mx-0">
+             <p className="text-gray-100 text-base md:text-lg font-bold max-w-xl leading-relaxed border-l-4 border-[#3EA9D8]/60 pl-5 py-1 mx-auto lg:mx-0">
                Over 27 years of engineering reliability and sustainable movement across 28 states with industrial-grade precision.
              </p>
           </motion.div>
@@ -132,11 +132,11 @@ export default function About() {
               <h2 className="text-2xl md:text-3xl font-black text-[#1D1860] mb-6 leading-tight">
                 Deb Air Express: <br/> Faster, Greener, <span className="text-[#3EA9D8]">Smarter</span>.
               </h2>
-              <div className="space-y-4 text-gray-600 font-medium text-sm md:text-base leading-relaxed lg:pr-8">
+              <div className="space-y-4 text-gray-900 font-bold text-sm md:text-base leading-relaxed lg:pr-8">
                 <p>
                   At Deb Air Express, we believe that logistics is about trust. Founded in 1995, we've transformed the Indian logistics landscape by prioritizing clinical precision over mere delivery.
                 </p>
-                <p className="bg-slate-50 p-5 rounded-xl italic border-l-4 border-[#3EA9D8] text-[#1D1860] text-sm md:text-base">
+                <p className="bg-slate-50 p-5 rounded-xl italic border-l-4 border-[#3EA9D8] text-[#1D1860] text-sm md:text-base font-bold">
                   "We pioneered the shift to 100% CNG-fueled fleets and expanded into multi-modal railway integrations to ensure that our operations are both efficient and environmentally responsible."
                 </p>
                 <p>
@@ -157,7 +157,7 @@ export default function About() {
                        </div>
                        <div>
                           <div className="text-sm font-black text-[#1D1860] mb-0.5">{box.t}</div>
-                          <div className="text-gray-500 text-xs font-bold uppercase tracking-widest">{box.l}</div>
+                          <div className="text-gray-700 text-xs font-bold uppercase tracking-widest">{box.l}</div>
                        </div>
                     </div>
                  ))}
@@ -176,7 +176,7 @@ export default function About() {
               <h3 className="text-xl md:text-2xl font-black mb-6 text-[#3EA9D8] uppercase flex items-center gap-3">
                 <Globe size={24} /> Vision
               </h3>
-              <p className="text-sm md:text-base font-medium leading-relaxed opacity-90">
+              <p className="text-sm md:text-base leading-relaxed text-white font-bold">
                 To be recognised as a trusted logistics partner known for speed, reliability, and exceptional customer relationships.
               </p>
             </div>
@@ -192,7 +192,7 @@ export default function About() {
                   "To continuously upgrade technology and processes",
                   "To provide personalised, flexible logistics solutions supported by owner-level involvement"
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-start text-sm md:text-base font-medium opacity-90">
+                  <li key={idx} className="flex items-start text-sm md:text-base font-bold text-white">
                     <CheckCircle2 size={16} className="text-[#3EA9D8] shrink-0 mr-3 mt-1" />
                     <span className="leading-relaxed">{item}</span>
                   </li>
@@ -222,7 +222,7 @@ export default function About() {
                   "Skilled drivers & handlers",
                   "24×7 communication and coordination"
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-center text-sm md:text-base font-semibold text-gray-700 bg-slate-50 p-4 rounded-xl border border-gray-100 transition-all hover:border-[#3EA9D8]/50 hover:shadow-md">
+                  <li key={idx} className="flex items-center text-sm md:text-base font-bold text-gray-800 bg-slate-50 p-4 rounded-xl border border-gray-100 transition-all hover:border-[#3EA9D8]/50 hover:shadow-md">
                     <div className="w-2 h-2 rounded-full bg-[#3EA9D8] mr-4 shrink-0 shadow-[0_0_8px_rgba(62,169,216,0.6)]"></div>
                     {item}
                   </li>
@@ -245,7 +245,7 @@ export default function About() {
                   "Compliant with chemical handling & transportation norms",
                   "Vehicles follow required safety standards"
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-center text-sm md:text-base font-semibold text-gray-700 bg-slate-50 p-4 rounded-xl border border-gray-100 transition-all hover:border-[#1D1860]/50 hover:shadow-md">
+                  <li key={idx} className="flex items-center text-sm md:text-base font-bold text-gray-800 bg-slate-50 p-4 rounded-xl border border-gray-100 transition-all hover:border-[#1D1860]/50 hover:shadow-md">
                     <Award size={18} className="text-[#1D1860] mr-4 shrink-0" />
                     {item}
                   </li>
@@ -279,7 +279,7 @@ export default function About() {
                         <Briefcase size={28} />
                      </div>
                      <h4 className="text-lg font-black text-[#1D1860] mb-3">{delivery.client}</h4>
-                     <p className="text-gray-500 text-sm font-medium leading-relaxed">{delivery.desc}</p>
+                     <p className="text-gray-900 text-sm font-bold leading-relaxed">{delivery.desc}</p>
                   </div>
                 ))}
              </div>
@@ -290,7 +290,7 @@ export default function About() {
             <div className="text-center mb-10">
                <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[10px] mb-2 block">Trusted By Industry Leaders</span>
                <h3 className="text-xl md:text-2xl font-black text-[#1D1860] uppercase">Major Clients</h3>
-               <p className="text-gray-500 font-medium text-sm mt-3">Deb Air Express proudly works with top companies such as:</p>
+               <p className="text-gray-900 font-black text-sm mt-3">Deb Air Express proudly works with top companies such as:</p>
             </div>
 
             <div className="flex flex-wrap justify-center gap-3">
@@ -348,7 +348,7 @@ export default function About() {
                    </div>
                    <p className="text-xs font-black text-[#3EA9D8] uppercase tracking-widest mb-2">{cap.label}</p>
                    <h5 className="text-lg font-black text-[#1D1860] mb-3">{cap.t}</h5>
-                   <p className="text-gray-500 text-sm font-medium leading-relaxed">{cap.d}</p>
+                   <p className="text-gray-900 text-sm font-bold leading-relaxed">{cap.d}</p>
                 </div>
               ))}
            </div>
@@ -363,7 +363,7 @@ export default function About() {
                  <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-xs mb-2 block">Operational Reach</span>
                  <h3 className="text-2xl md:text-3xl font-black text-[#1D1860]">Strategic Network Centers</h3>
               </div>
-              <p className="text-gray-500 font-semibold max-w-sm text-sm">
+              <p className="text-gray-900 font-bold max-w-sm text-sm">
                 24/7 cross-docking operations at the heart of India's commercial corridors.
               </p>
            </div>
@@ -381,7 +381,7 @@ export default function About() {
                    </div>
                    <p className="text-[#3EA9D8] font-black text-xs tracking-widest uppercase mb-1">{hub.r}</p>
                    <h5 className="text-base font-black text-[#1D1860] mb-2">{hub.h}</h5>
-                   <p className="text-gray-500 text-sm font-medium leading-snug">{hub.d}</p>
+                   <p className="text-gray-800 text-sm font-bold leading-snug">{hub.d}</p>
                 </div>
               ))}
            </div>
@@ -414,7 +414,7 @@ export default function About() {
                              {ms.year}
                           </div>
                           <h4 className="text-lg font-black text-[#1D1860] mb-3">{ms.title}</h4>
-                          <p className="text-gray-500 font-medium text-sm leading-relaxed">{ms.desc}</p>
+                          <p className="text-gray-800 font-black text-sm leading-relaxed">{ms.desc}</p>
                        </div>
                        <div className="absolute left-1/2 top-8 w-3 h-3 rounded-full bg-[#3EA9D8] -translate-x-1/2 border-2 border-white shadow-lg hidden lg:block"></div>
                     </motion.div>
@@ -447,7 +447,7 @@ export default function About() {
                       <val.i size={22} />
                    </div>
                    <h5 className="text-base font-black text-[#1D1860] mb-2">{val.t}</h5>
-                   <p className="text-gray-500 text-sm font-medium leading-relaxed">{val.d}</p>
+                   <p className="text-gray-800 text-sm font-bold leading-relaxed">{val.d}</p>
                 </div>
               ))}
            </div>
@@ -477,7 +477,7 @@ export default function About() {
               <div className="absolute top-0 right-0 w-96 h-96 bg-[#3EA9D8]/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
               <div className="relative z-10 max-w-2xl mx-auto">
                  <h2 className="text-2xl md:text-4xl font-black mb-6 leading-tight">Partner with <span className="text-[#3EA9D8]">Excellence</span></h2>
-                 <p className="text-gray-300 font-medium mb-10 text-base opacity-90 max-w-xl mx-auto">
+                 <p className="text-gray-100 font-black mb-10 text-base max-w-xl mx-auto">
                    Join 900+ businesses who rely on Deb Air Express for mission-critical and eco-friendly logistics across India.
                  </p>
                  <div className="flex flex-col sm:flex-row gap-4 justify-center">

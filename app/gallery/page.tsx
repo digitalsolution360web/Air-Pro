@@ -30,7 +30,7 @@ export default function Gallery() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-gray-600 text-lg max-w-2xl mx-auto"
+          className="text-gray-800 text-lg max-w-2xl mx-auto font-bold"
         >
           Explore our logistics excellence through pictures. From fleet to warehousing, we ensure quality at every step.
         </motion.p>

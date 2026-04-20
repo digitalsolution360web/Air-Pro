@@ -147,7 +147,7 @@ export default function Home() {
               <span className="text-[#3EA9D8]">Indian Logistics</span>
             </motion.h1>
 
-            <motion.p variants={fadeInUp} className="text-sm md:text-base text-gray-300 mb-8 leading-relaxed max-w-lg font-medium opacity-90">
+            <motion.p variants={fadeInUp} className="text-sm md:text-base text-gray-100 mb-8 leading-relaxed max-w-lg font-medium">
               Empowering your growth with 27 years of technological precision and nationwide reach. Your mission-critical shipments, our priority.
             </motion.p>
 
@@ -212,7 +212,7 @@ export default function Home() {
               <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-[#1D1860] mb-6 leading-tight">
                 27 Years of Relentless <br /> Logistics Perfection
               </h3>
-              <p className="text-gray-600 text-sm md:text-[15px] mb-6 leading-relaxed">
+              <p className="text-gray-800 text-sm md:text-[15px] mb-6 leading-relaxed">
                 Founded in 1995, Deb Air Express has evolved from a local courier and cargo handler into a nationwide logistics powerhouse. We provide end-to-end solutions that bridge the gap between businesses and their goals across every pincode in India.
               </p>
               <div className="space-y-4 mb-8">
@@ -296,7 +296,7 @@ export default function Home() {
                   <item.icon size={28} />
                 </div>
                 <h4 className="text-xl font-black text-[#1D1860] mb-3">{item.title}</h4>
-                <p className="text-gray-500 text-sm leading-relaxed font-medium">{item.desc}</p>
+                <p className="text-gray-700 text-sm leading-relaxed font-medium">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -319,7 +319,7 @@ export default function Home() {
               <h3 id="company-overview" className="text-2xl md:text-3xl font-black text-[#1D1860] mb-6">
                 Company Overview
               </h3>
-              <p className="text-gray-600 text-base leading-relaxed mb-10 font-medium">
+              <p className="text-gray-800 text-base leading-relaxed mb-10 font-medium">
                 Deb Air Express is a professionally managed logistics and transportation company delivering fast, reliable, and customised supply chain solutions across India. As a relatively small but highly involved company, we take great pride in our customer service, personal attention, and long-standing client relationships. With our people present across most major regions, we stay connected and involved at every stage of the logistics process.
               </p>
 
@@ -373,7 +373,7 @@ export default function Home() {
                       <div className="mt-0.5 bg-[#3EA9D8]/10 p-1.5 rounded-full text-[#3EA9D8] transition-colors group-hover:bg-[#3EA9D8] group-hover:text-white">
                         <CheckCircle2 size={12} className="shrink-0" />
                       </div>
-                      <span className="leading-snug">{item}</span>
+                      <span className="leading-snug text-gray-800">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -396,7 +396,7 @@ export default function Home() {
                   </div>
                   Industry Expertise
                 </h3>
-                <p className="text-gray-500 text-sm mb-5 font-medium">We provide services across:</p>
+                <p className="text-gray-700 text-sm mb-5 font-bold">We provide services across:</p>
                 <div className="flex flex-wrap gap-3">
                   {[
                     "Pharmaceuticals",
@@ -438,7 +438,7 @@ export default function Home() {
                     { text: "Transparent communication and billing", isSub: true },
                     { text: "Highly flexible and customer-focused approach", isSub: true }
                   ].map((point, pIdx) => (
-                    <div key={pIdx} className={`flex items-start text-sm md:text-[15px] ${point.isSub ? 'ml-8 text-gray-400 pl-5 border-l-2 border-[#3EA9D8]/20 py-1' : 'font-bold text-gray-100 py-0.5'}`}>
+                    <div key={pIdx} className={`flex items-start text-sm md:text-[15px] ${point.isSub ? 'ml-8 text-gray-200 pl-5 border-l-2 border-[#3EA9D8]/20 py-1' : 'font-black text-white py-0.5'}`}>
                       {!point.isSub && (
                         <div className="w-2 h-2 rounded-full bg-[#3EA9D8] mr-4 mt-2 shrink-0 shadow-[0_0_10px_rgba(62,169,216,0.6)]"></div>
                       )}
@@ -523,7 +523,7 @@ export default function Home() {
                       <service.icon size={24} />
                     </div>
                     <h4 className="text-2xl md:text-3xl font-black text-[#1D1860] mb-4 leading-tight">{service.title}</h4>
-                    <p className="text-gray-500 text-sm md:text-base font-medium leading-relaxed mb-6">
+                    <p className="text-gray-800 text-sm md:text-base font-semibold leading-relaxed mb-6">
                       {service.desc}
                     </p>
                     <Link href="/services" className="inline-flex items-center text-[#3EA9D8] font-black text-sm tracking-widest group">
@@ -620,7 +620,7 @@ export default function Home() {
                   <span className="font-bold text-[#1D1860] pr-4">{faq.q}</span>
                   <ChevronDown className="w-5 h-5 text-[#3EA9D8] group-open:rotate-180 transition-transform" />
                 </summary>
-                <div className="px-6 pb-6 text-gray-500 text-sm leading-relaxed border-t border-gray-100/50 pt-4 font-medium">
+                <div className="px-6 pb-6 text-gray-700 text-sm leading-relaxed border-t border-gray-100/50 pt-4 font-bold">
                   {faq.a}
                 </div>
               </details>
@@ -680,7 +680,7 @@ export default function Home() {
                     Lalan Kumar Singh
                   </h3>
                   <div className="text-white text-[10px] md:text-[11px] font-bold tracking-[0.15em] uppercase mb-6 pb-3 md:pb-4 inline-block w-[90%] md:w-[85%] border-b border-white/20">
-                    Operations Director
+                    Founder
                   </div>
                   
                   <div>
@@ -740,13 +740,13 @@ export default function Home() {
                 className="flex flex-col items-center gap-3 min-w-[170px] md:min-w-[190px] group/card"
               >
                 {/* Logo Card */}
-                <div className="w-[170px] h-[100px] md:w-[190px] md:h-[110px] bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center p-4 backdrop-blur-sm shadow-[0_4px_30px_rgba(0,0,0,0.3)] transition-all duration-300 group-hover/card:border-[#3EA9D8]/50 group-hover/card:bg-white/10 group-hover/card:shadow-[0_0_25px_rgba(62,169,216,0.15)]">
+                <div className="w-[170px] h-[100px] md:w-[190px] md:h-[110px] bg-white border border-gray-100 rounded-2xl flex items-center justify-center p-4 shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-all duration-300 group-hover/card:border-[#3EA9D8]/50 group-hover/card:shadow-[0_0_25px_rgba(62,169,216,0.15)]">
                   <Image
                     src={client.img}
                     alt={client.name}
                     width={140}
                     height={75}
-                    className="object-contain max-h-[70px] filter brightness-90 group-hover/card:brightness-110 transition-all duration-300"
+                    className="object-contain max-h-[70px] filter brightness-100 transition-all duration-300"
                   />
                 </div>
                 {/* Company Name */}
@@ -764,27 +764,6 @@ export default function Home() {
         </p>
       </section>
 
-      {/* 4.6 Store Locator / Map Section */}
-      <section className="py-16 bg-[#eaeff5] border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[10px] mb-2 block">Visit Us</span>
-            <h3 className="text-2xl md:text-3xl font-black text-[#1D1860]">Find Our Presence</h3>
-          </div>
-          <div className="w-full h-[450px] md:h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.9273938005636!2d77.25380299999999!3d28.541902000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3da3ead3a8b%3A0xe35b169b3e36c0d3!2sDeb%20Air%20Express%20Cargo%20And%20Couriers!5e0!3m2!1sen!2sin!4v1775493368659!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
-            ></iframe>
-          </div>
-        </div>
-      </section>
 
 
 
@@ -796,7 +775,7 @@ export default function Home() {
 
             <div className="relative z-10 max-w-2xl mx-auto">
               <h2 className="text-2xl md:text-4xl font-black mb-6 leading-tight">Prepare Your Business <br /> <span className="text-[#3EA9D8]">Next Logistics Jump</span></h2>
-              <p className="text-gray-300 text-sm md:text-base mb-10 opacity-90 font-medium">
+              <p className="text-gray-100 text-sm md:text-base mb-10 font-bold">
                 Contact our consultation team today to optimize your supply chain with our award-winning logistics framework.
               </p>
               <div className="flex flex-col items-center">

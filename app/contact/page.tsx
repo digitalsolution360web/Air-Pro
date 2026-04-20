@@ -67,7 +67,7 @@ export default function Contact() {
              initial="hidden"
              animate="visible"
              variants={fadeInUp}
-             className="text-gray-400 text-sm md:text-lg font-medium max-w-2xl mx-auto leading-relaxed"
+             className="text-gray-100 text-sm md:text-lg font-bold max-w-2xl mx-auto leading-relaxed"
            >
              Our industrial response team is ready to assist with your complex logistics requirements within 24 hours.
            </motion.p>
@@ -109,7 +109,7 @@ export default function Contact() {
                          </div>
                          <div>
                             <h4 className="font-black text-[#1D1860] text-[13px] uppercase tracking-wider mb-1 leading-none">{item.t}</h4>
-                            <p className="text-gray-500 text-xs font-semibold leading-relaxed">{item.d}</p>
+                            <p className="text-gray-700 text-xs font-bold leading-relaxed">{item.d}</p>
                             {item.c !== "#" && (
                                <a href={item.c} className="text-[#3EA9D8] font-black text-[10px] tracking-widest uppercase flex items-center hover:scale-105 transition-transform origin-left mt-1.5">
                                   Connect Now <MoveRight className="ml-2 w-3 h-3" />
@@ -132,7 +132,7 @@ export default function Contact() {
                     <div className="relative z-10">
                        <div className="mb-10">
                           <h3 className="text-2xl font-black mb-3">Initiate Consultation</h3>
-                          <p className="text-gray-400 text-sm font-medium opacity-80">Fill our high-priority support form and our specialists will contact you.</p>
+                          <p className="text-gray-100 text-sm font-bold">Fill our high-priority support form and our specialists will contact you.</p>
                        </div>
 
                        <form onSubmit={handleSubmit} className="space-y-6">
