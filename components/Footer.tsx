@@ -148,32 +148,21 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Global Stats / Trust row */}
-        <div className="py-8 border-y border-white/10 flex flex-wrap gap-6 justify-between items-center mb-10">
-           <div className="flex items-center space-x-3 text-gray-400">
-             <Globe className="text-[#3EA9D8] w-6 h-6" />
-             <span className="font-medium text-white">Global Reach:</span>
-             <span>150+ Countries</span>
-           </div>
-           <div className="flex items-center space-x-3 text-gray-400">
-             <ShieldCheck className="text-[#3EA9D8] w-6 h-6" />
-             <span className="font-medium text-white">Security:</span>
-             <span>Enterprise Grade AES-256</span>
-           </div>
-           <div className="flex items-center space-x-3 text-gray-400">
-             <Clock className="text-[#3EA9D8] w-6 h-6" />
-             <span className="font-medium text-white">Support:</span>
-             <span>24/7/365 Active Monitoring</span>
-           </div>
-        </div>
+
 
         {/* Bottom copyright */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <p>© {new Date().getFullYear()} Deb Air Express. All rights reserved.</p>
-            <p className="mt-1 text-gray-400">
-              Design by <a href="https://www.digitalsolution360.in/" className="text-[#3EA9D8] hover:text-white transition-colors duration-300 font-medium" target="_blank" rel="noopener noreferrer">Digital Solution 360</a>
-            </p>
+            <a 
+              href="https://www.digitalsolution360.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="mt-2 flex items-center gap-2 text-[#3EA9D8]/70 hover:text-[#3EA9D8] transition-all duration-300 group"
+            >
+              <span className="w-1 h-1 rounded-full bg-[#3EA9D8]/50 group-hover:scale-150 group-hover:bg-[#3EA9D8] transition-all"></span>
+              <span className="text-xs font-medium tracking-wide">Design by Digital Solution 360</span>
+            </a>
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>

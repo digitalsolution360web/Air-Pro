@@ -721,36 +721,38 @@ export default function Home() {
           <div className="absolute right-0 top-0 h-full w-24 md:w-40 bg-gradient-to-l from-[#06041A] to-transparent z-20 pointer-events-none" />
 
           {/* Scrolling Row — duplicated for seamless loop */}
-          <div className="flex gap-6 md:gap-10 animate-logo-scroll group-hover:[animation-play-state:paused]" style={{ width: 'max-content' }}>
+          <div className="flex gap-8 md:gap-14 animate-logo-scroll group-hover:[animation-play-state:paused]" style={{ width: 'max-content' }}>
             {[
               { img: "/Beam_Global_Spirits_Wine_Pvt_Ltd.png",  name: "Beam Global Spirits & Wine Pvt. Ltd." },
-              { img: "/Brown_For_Man_Pvt_Ltd..png",            name: "Brown For Man Pvt. Ltd." },
+              { img: "/khadim.svg",                             name: "Khadim India Ltd." },
               { img: "/Covestro_India_Pvt_Ltd.png",            name: "Covestro India Pvt. Ltd." },
               { img: "/Jubilant_Ingrevia_Ltd.webp",            name: "Jubilant Ingrevia Ltd." },
               { img: "/Vineeth_Precious_Catalysts _Pvt_Ltd.jpg", name: "Vineeth Precious Catalysts Pvt. Ltd." },
-              // Duplicate for seamless infinite loop
+              { img: "/Brown_For_Man_Pvt_Ltd..png",            name: "Brown For Man Pvt. Ltd." },
+              // Duplicate set for seamless loop
               { img: "/Beam_Global_Spirits_Wine_Pvt_Ltd.png",  name: "Beam Global Spirits & Wine Pvt. Ltd." },
-              { img: "/Brown_For_Man_Pvt_Ltd..png",            name: "Brown For Man Pvt. Ltd." },
+              { img: "/khadim.svg",                             name: "Khadim India Ltd." },
               { img: "/Covestro_India_Pvt_Ltd.png",            name: "Covestro India Pvt. Ltd." },
               { img: "/Jubilant_Ingrevia_Ltd.webp",            name: "Jubilant Ingrevia Ltd." },
               { img: "/Vineeth_Precious_Catalysts _Pvt_Ltd.jpg", name: "Vineeth Precious Catalysts Pvt. Ltd." },
+              { img: "/Brown_For_Man_Pvt_Ltd..png",            name: "Brown For Man Pvt. Ltd." },
             ].map((client, idx) => (
               <div
                 key={idx}
-                className="flex flex-col items-center gap-3 min-w-[170px] md:min-w-[190px] group/card"
+                className="flex flex-col items-center gap-2 min-w-[180px] md:min-w-[210px] group/card"
               >
                 {/* Logo Card */}
-                <div className="w-[170px] h-[100px] md:w-[190px] md:h-[110px] bg-white border border-gray-100 rounded-2xl flex items-center justify-center p-4 shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-all duration-300 group-hover/card:border-[#3EA9D8]/50 group-hover/card:shadow-[0_0_25px_rgba(62,169,216,0.15)]">
+                <div className="w-[180px] h-[100px] md:w-[210px] md:h-[120px] bg-white border border-gray-100 rounded-2xl flex items-center justify-center px-5 py-4 shadow-md transition-all duration-300 group-hover/card:border-[#3EA9D8]/40 group-hover/card:-translate-y-1 group-hover/card:shadow-[0_8px_30px_rgba(62,169,216,0.18)]">
                   <Image
                     src={client.img}
                     alt={client.name}
-                    width={140}
-                    height={75}
-                    className="object-contain max-h-[70px] filter brightness-100 transition-all duration-300"
+                    width={150}
+                    height={80}
+                    className="object-contain max-h-[65px] max-w-[140px] transition-all duration-300 group-hover/card:scale-105"
                   />
                 </div>
                 {/* Company Name */}
-                <p className="text-center text-white/70 text-[10px] md:text-[11px] font-semibold tracking-wide leading-snug max-w-[160px] group-hover/card:text-[#3EA9D8] transition-colors duration-300">
+                <p className="text-center text-white font-bold text-[10px] md:text-[11px] tracking-wide leading-snug max-w-[170px] group-hover/card:text-[#3EA9D8] transition-colors duration-300">
                   {client.name}
                 </p>
               </div>
