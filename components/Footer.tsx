@@ -41,14 +41,14 @@ const YoutubeIcon = ({ size = 24 }: { size?: number }) => (
 export default function Footer() {
   return (
     <footer className="relative bg-[#0d0A30] text-gray-300 pt-24 pb-12 overflow-hidden">
-      
+
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#3EA9D8]/5 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#1D1860]/50 rounded-full blur-[100px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
-          
+
           {/* Brand Info (Spans 4 columns on large screens) */}
           <div className="lg:col-span-4 space-y-7">
             <div className="bg-white inline-block p-3 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
@@ -74,7 +74,7 @@ export default function Footer() {
                 { icon: <YoutubeIcon size={18} />, label: "YouTube" }
               ].map((social, idx) => (
                 <a key={idx} href="#" aria-label={social.label} className="w-10 h-10 rounded-full bg-[#1D1860] border border-white/10 flex items-center justify-center text-white hover:bg-[#3EA9D8] hover:scale-110 active:scale-95 transition-all duration-300 shadow-lg group">
-                   {social.icon}
+                  {social.icon}
                 </a>
               ))}
             </div>
@@ -113,9 +113,9 @@ export default function Footer() {
           {/* Contact Details (Spans 4 columns) */}
           <div className="lg:col-span-4 bg-white/5 rounded-2xl p-8 border border-white/10 backdrop-blur-sm relative overflow-hidden group hover:border-[#3EA9D8]/30 transition-colors duration-500">
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#3EA9D8]/10 rounded-full blur-[40px] group-hover:bg-[#3EA9D8]/20 transition-colors duration-500"></div>
-            
+
             <h3 className="text-lg font-bold text-white mb-6 uppercase tracking-wider text-[14px] relative z-10">Get In Touch</h3>
-            
+
             <ul className="space-y-5 relative z-10">
               <li className="flex items-start">
                 <div className="mt-1 mr-4 bg-[#3EA9D8]/20 p-2 rounded-lg text-[#3EA9D8]">
@@ -123,7 +123,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <h4 className="text-white font-medium text-[15px]">Global Headquarters</h4>
-                  <p className="text-gray-400 text-sm mt-1">F-7, Ground Floor, Main road, Kalkaji <br/>New Delhi 110017</p>
+                  <p className="text-gray-400 text-sm mt-1">F-7, Ground Floor, Main road, Kalkaji <br />New Delhi 110017</p>
                 </div>
               </li>
               <li className="flex items-start">
@@ -132,7 +132,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <h4 className="text-white font-medium text-[15px]">24/7 Support</h4>
-                  <p className="text-gray-400 text-sm mt-1">+91-9811350228<br/>+91-9311350228</p>
+                  <p className="text-gray-400 text-sm mt-1">+91-9811350228<br />+91-9311350228</p>
                 </div>
               </li>
               <li className="flex items-start">
@@ -154,9 +154,9 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <p>© {new Date().getFullYear()} Deb Air Express. All rights reserved.</p>
-            <a 
-              href="https://www.digitalsolution360.com/" 
-              target="_blank" 
+            <a
+              href="https://www.digitalsolution360.com/"
+              target="_blank"
               rel="noopener noreferrer"
               className="mt-2 flex items-center gap-2 text-[#3EA9D8]/70 hover:text-[#3EA9D8] transition-all duration-300 group"
             >
@@ -196,12 +196,12 @@ export default function Footer() {
       <div className="md:hidden fixed bottom-0 left-0 w-full z-[9999]">
         <div className="bg-white shadow-[0_-4px_20px_rgba(0,0,0,0.1)] flex items-center justify-between px-4 py-3">
           <span className="bg-[#0d0A30] text-white font-semibold text-sm tracking-wide px-4 py-2 rounded-full">
-            Get Free Support
+            Ship Now
           </span>
           <div className="flex items-center gap-3">
             <a
               href="tel:+919811350228"
-              className="bg-[#25D366] hover:bg-[#1da851] w-10 h-10 rounded-full flex items-center justify-center shadow-md active:scale-95 transition-all duration-300"
+              className="bg-[#3EA9D8] hover:bg-[#2d94c2] w-10 h-10 rounded-full flex items-center justify-center shadow-md active:scale-95 transition-all duration-300"
               aria-label="Call us"
             >
               <Phone size={20} className="text-white" />
