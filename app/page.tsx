@@ -537,12 +537,86 @@ export default function Home() {
         })}
       </div>
 
+      {/* 4.56 Our Esteemed Clients - Logo Auto Slider */}
+      <section className="py-8 md:py-12 bg-gray-900 relative overflow-hidden">
+        {/* Background Glow */}
+        {/* <div className="absolute top-0 left-1/4 w-[500px] h-[300px] bg-[#3EA9D8]/8 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[200px] bg-[#1D1860]/50 blur-[100px] rounded-full pointer-events-none" /> */}
+
+        {/* Heading */}
+        <div className="text-center mb-6 md:mb-8 relative z-10">
+          <span className="text-[#3EA9D8] font-black tracking-[0.3em] uppercase text-[10px] mb-2 block">
+            Our Esteemed Clients
+          </span>
+          <h2 className="text-xl md:text-2xl font-black text-white leading-tight">
+            Trusted by <span className="text-[#3EA9D8]">Industry Leaders</span>
+          </h2>
+          <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#3EA9D8] to-transparent mx-auto mt-3 rounded-full" />
+        </div>
+
+        {/* Slider Track */}
+        <div className="relative overflow-hidden group">
+          {/* Left / Right Fade Masks */}
+          {/* <div className="absolute left-0 top-0 h-full w-24 md:w-40 bg-gradient-to-r from-[#06041A] to-transparent z-20 pointer-events-none" />
+          <div className="absolute right-0 top-0 h-full w-24 md:w-40 bg-gradient-to-l from-[#06041A] to-transparent z-20 pointer-events-none" /> */}
+
+          {/* Scrolling Row — duplicated for seamless loop */}
+          <div className="flex gap-8 md:gap-14 animate-logo-scroll group-hover:[animation-play-state:paused]" style={{ width: 'max-content' }}>
+            {[
+              { img: "/Beam_Global_Spirits_Wine_Pvt_Ltd.png", name: "Beam Global Spirits & Wine Pvt. Ltd." },
+              { img: "/khadim.svg", name: "Khadim India Ltd." },
+              { img: "/Covestro_India_Pvt_Ltd.png", name: "Covestro India Pvt. Ltd." },
+              { img: "/Jubilant_Ingrevia_Ltd.webp", name: "Jubilant Ingrevia Ltd." },
+              { img: "/Vineeth_Precious_Catalysts _Pvt_Ltd.jpg", name: "Vineeth Precious Catalysts Pvt. Ltd." },
+              { img: "/Brown_For_Man_Pvt_Ltd..png", name: "Brown For Man Pvt. Ltd." },
+              // Duplicate set for seamless loop
+              { img: "/Beam_Global_Spirits_Wine_Pvt_Ltd.png", name: "Beam Global Spirits & Wine Pvt. Ltd." },
+              { img: "/khadim.svg", name: "Khadim India Ltd." },
+              { img: "/Covestro_India_Pvt_Ltd.png", name: "Covestro India Pvt. Ltd." },
+              { img: "/Jubilant_Ingrevia_Ltd.webp", name: "Jubilant Ingrevia Ltd." },
+              { img: "/Vineeth_Precious_Catalysts _Pvt_Ltd.jpg", name: "Vineeth Precious Catalysts Pvt. Ltd." },
+              { img: "/Brown_For_Man_Pvt_Ltd..png", name: "Brown For Man Pvt. Ltd." },
+            ].map((client, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col items-center gap-2 min-w-[180px] md:min-w-[210px] group/card"
+              >
+                {/* Logo Card */}
+                <div className="w-[180px] h-[100px] md:w-[210px] md:h-[120px] bg-white border border-gray-100 rounded-2xl flex items-center justify-center px-5 py-4 shadow-md transition-all duration-300 group-hover/card:border-[#3EA9D8]/40 group-hover/card:-translate-y-1 group-hover/card:shadow-[0_8px_30px_rgba(62,169,216,0.18)]">
+                  <Image
+                    src={client.img}
+                    alt={client.name}
+                    width={150}
+                    height={80}
+                    className="object-contain max-h-[65px] max-w-[140px] transition-all duration-300 group-hover/card:scale-105"
+                  />
+                </div>
+                {/* Company Name */}
+                <p className="text-center text-white font-bold text-[10px] md:text-[11px] tracking-wide leading-snug max-w-[170px] group-hover/card:text-[#3EA9D8] transition-colors duration-300">
+                  {client.name}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom tagline */}
+        <p className="text-center text-white/30 text-[10px] font-medium tracking-widest uppercase mt-6 relative z-10">
+          Delivering Excellence Across Industries
+        </p>
+      </section>
+
       {/* 4. Testimonials */}
-      <section className="py-16 bg-[#edf2f7] border-y border-gray-200 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
+      <section className="py-20 bg-gradient-to-b from-[#f8fafc] to-[#f1f5f9] border-y border-gray-200 relative overflow-hidden">
+        {/* Subtle Background Accent */}
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#3EA9D8]/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#1D1860]/5 rounded-full blur-[100px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12">
             <span className="text-[#3EA9D8] font-black tracking-widest uppercase text-[10px] mb-3 block">Endorsements</span>
             <h3 className="text-2xl md:text-3xl font-black text-[#1D1860]">What Clients Say</h3>
+            <div className="w-12 h-[2px] bg-[#3EA9D8] mx-auto mt-4 rounded-full" />
           </div>
 
           <div className="relative max-w-4xl mx-auto">
@@ -558,7 +632,7 @@ export default function Home() {
                 >
                   <div className="flex flex-col items-center">
                     <div className="relative mb-8">
-                      <div className="w-24 h-24 md:w-28 md:h-28 rounded-full ring-4 ring-[#3EA9D8]/20 p-1">
+                      <div className="w-24 h-24 md:w-28 md:h-28 rounded-full ring-4 ring-[#3EA9D8]/20 p-1 bg-white">
                         <Image
                           src={testimonials[activeTestimonial].image}
                           alt={testimonials[activeTestimonial].name}
@@ -571,7 +645,7 @@ export default function Home() {
                       </div>
                     </div>
 
-                    <div className="bg-white p-8 md:p-12 rounded-[2.5rem] text-center border border-gray-50 relative shadow-sm">
+                    <div className="bg-white p-8 md:p-12 rounded-[2.5rem] text-center border border-gray-100 relative shadow-[0_20px_50px_rgba(0,0,0,0.05)]">
                       <div className="flex justify-center gap-1 mb-6">
                         {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#FFC107" className="text-[#FFC107]" />)}
                       </div>
@@ -630,43 +704,43 @@ export default function Home() {
       </section>
 
       {/* 4.55 Leadership / Operations Director Section */}
-      <section className="py-12 md:py-16 bg-[#f8fafc] relative">
+      <section className="py-12 md:py-16 bg-gray-200 relative">
         <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           {/* Top Heading with Red Line Accents - Reduced margin */}
           <div className="flex items-center justify-center mb-10 md:mb-14 relative">
-             <div className="h-[2px] bg-[#e3000f]/80 w-[20%] lg:w-[30%] hidden md:block absolute left-0 rounded-r-full"></div>
-             <h2 className="text-3xl md:text-4xl font-black text-[#1D1860] px-6 text-center tracking-tight">
-               Words That <span className="text-[#e3000f]">Guide Us</span>
-             </h2>
-             <div className="h-[2px] bg-[#e3000f]/80 w-[20%] lg:w-[30%] hidden md:block absolute right-0 rounded-l-full"></div>
+            <div className="h-[2px] bg-[#e3000f]/80 w-[20%] lg:w-[30%] hidden md:block absolute left-0 rounded-r-full"></div>
+            <h2 className="text-3xl md:text-4xl font-black text-[#1D1860] px-6 text-center tracking-tight">
+              Words That <span className="text-[#e3000f]">Guide Us</span>
+            </h2>
+            <div className="h-[2px] bg-[#e3000f]/80 w-[20%] lg:w-[30%] hidden md:block absolute right-0 rounded-l-full"></div>
           </div>
 
           <div className="relative max-w-5xl mx-auto">
-            
+
             {/* Overlapping Image Container - Tighter overlap */}
             <div className="md:absolute md:bottom-0 md:left-8 w-full md:w-[38%] px-6 md:px-0 relative z-20 flex justify-center md:block">
               <div className="w-full max-w-[320px] h-[360px] sm:h-[400px] md:h-[420px] lg:h-[460px] relative rounded-t-xl md:rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.3)] overflow-hidden border-b-0 md:border-b-[3px] border-[#e3000f] transform md:-translate-y-6 bg-gray-100 z-30 mb-[-1.5rem] md:mb-0">
-                 <Image 
-                   src="/founder.jpeg"
-                   alt="Lalan Kumar Singh"
-                   fill
-                   priority
-                   sizes="(max-width: 768px) 100vw, 400px"
-                   className="object-cover object-[center_28%]"
-                 />
+                <Image
+                  src="/founder.jpeg"
+                  alt="Lalan Kumar Singh"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  className="object-cover object-[center_28%]"
+                />
               </div>
             </div>
 
             {/* Deep Blue Box - Compact Padding */}
             <div className="bg-[#122b46] w-full shadow-2xl rounded-[1rem] flex flex-col md:flex-row relative z-10 min-h-[300px]">
-              
+
               {/* Left Spacer for image overlap (Desktop) */}
               <div className="hidden md:block w-[40%] shrink-0"></div>
 
               {/* Text Area - Reduced Gaps */}
               <div className="w-full md:w-[60%] p-8 pt-12 md:p-10 lg:p-12 flex flex-col justify-center">
-                
+
                 <div className="relative pl-4 md:pl-2">
                   <span className="text-4xl lg:text-5xl text-white font-serif font-black opacity-80 absolute top-[-10px] left-[-15px]">“</span>
                   <p className="text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-[1.6] mb-6 italic text-white tracking-wide">
@@ -674,7 +748,7 @@ export default function Home() {
                   </p>
                   <span className="text-4xl lg:text-5xl text-white font-serif font-black opacity-80 absolute bottom-[-20px] right-[10px]">”</span>
                 </div>
-                
+
                 <div className="mt-6 md:mt-8 pl-4 md:pl-2">
                   <h3 className="text-xl md:text-2xl font-black text-[#e3000f] mb-1 tracking-tight">
                     Lalan Kumar Singh
@@ -682,92 +756,20 @@ export default function Home() {
                   <div className="text-white text-[10px] md:text-[11px] font-bold tracking-[0.15em] uppercase mb-6 pb-3 md:pb-4 inline-block w-[90%] md:w-[85%] border-b border-white/20">
                     Founder
                   </div>
-                  
+
                   <div>
                     <button className="bg-[#e3000f] text-white px-8 py-3 font-bold text-[11px] md:text-[12px] tracking-widest uppercase transition-all shadow-md hover:bg-[#cc000d] hover:-translate-y-0.5 hover:shadow-lg inline-block w-auto">
                       STORIES THAT MOVE US
                     </button>
                   </div>
                 </div>
-                
+
               </div>
 
             </div>
           </div>
         </div>
       </section>
-
-      {/* 4.56 Our Esteemed Clients - Logo Auto Slider */}
-      <section className="py-8 md:py-12 bg-[#06041A] relative overflow-hidden">
-        {/* Background Glow */}
-        <div className="absolute top-0 left-1/4 w-[500px] h-[300px] bg-[#3EA9D8]/8 blur-[120px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[200px] bg-[#1D1860]/50 blur-[100px] rounded-full pointer-events-none" />
-
-        {/* Heading */}
-        <div className="text-center mb-6 md:mb-8 relative z-10">
-          <span className="text-[#3EA9D8] font-black tracking-[0.3em] uppercase text-[10px] mb-2 block">
-            Our Esteemed Clients
-          </span>
-          <h2 className="text-xl md:text-2xl font-black text-white leading-tight">
-            Trusted by <span className="text-[#3EA9D8]">Industry Leaders</span>
-          </h2>
-          <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#3EA9D8] to-transparent mx-auto mt-3 rounded-full" />
-        </div>
-
-        {/* Slider Track */}
-        <div className="relative overflow-hidden group">
-          {/* Left / Right Fade Masks */}
-          <div className="absolute left-0 top-0 h-full w-24 md:w-40 bg-gradient-to-r from-[#06041A] to-transparent z-20 pointer-events-none" />
-          <div className="absolute right-0 top-0 h-full w-24 md:w-40 bg-gradient-to-l from-[#06041A] to-transparent z-20 pointer-events-none" />
-
-          {/* Scrolling Row — duplicated for seamless loop */}
-          <div className="flex gap-8 md:gap-14 animate-logo-scroll group-hover:[animation-play-state:paused]" style={{ width: 'max-content' }}>
-            {[
-              { img: "/Beam_Global_Spirits_Wine_Pvt_Ltd.png",  name: "Beam Global Spirits & Wine Pvt. Ltd." },
-              { img: "/khadim.svg",                             name: "Khadim India Ltd." },
-              { img: "/Covestro_India_Pvt_Ltd.png",            name: "Covestro India Pvt. Ltd." },
-              { img: "/Jubilant_Ingrevia_Ltd.webp",            name: "Jubilant Ingrevia Ltd." },
-              { img: "/Vineeth_Precious_Catalysts _Pvt_Ltd.jpg", name: "Vineeth Precious Catalysts Pvt. Ltd." },
-              { img: "/Brown_For_Man_Pvt_Ltd..png",            name: "Brown For Man Pvt. Ltd." },
-              // Duplicate set for seamless loop
-              { img: "/Beam_Global_Spirits_Wine_Pvt_Ltd.png",  name: "Beam Global Spirits & Wine Pvt. Ltd." },
-              { img: "/khadim.svg",                             name: "Khadim India Ltd." },
-              { img: "/Covestro_India_Pvt_Ltd.png",            name: "Covestro India Pvt. Ltd." },
-              { img: "/Jubilant_Ingrevia_Ltd.webp",            name: "Jubilant Ingrevia Ltd." },
-              { img: "/Vineeth_Precious_Catalysts _Pvt_Ltd.jpg", name: "Vineeth Precious Catalysts Pvt. Ltd." },
-              { img: "/Brown_For_Man_Pvt_Ltd..png",            name: "Brown For Man Pvt. Ltd." },
-            ].map((client, idx) => (
-              <div
-                key={idx}
-                className="flex flex-col items-center gap-2 min-w-[180px] md:min-w-[210px] group/card"
-              >
-                {/* Logo Card */}
-                <div className="w-[180px] h-[100px] md:w-[210px] md:h-[120px] bg-white border border-gray-100 rounded-2xl flex items-center justify-center px-5 py-4 shadow-md transition-all duration-300 group-hover/card:border-[#3EA9D8]/40 group-hover/card:-translate-y-1 group-hover/card:shadow-[0_8px_30px_rgba(62,169,216,0.18)]">
-                  <Image
-                    src={client.img}
-                    alt={client.name}
-                    width={150}
-                    height={80}
-                    className="object-contain max-h-[65px] max-w-[140px] transition-all duration-300 group-hover/card:scale-105"
-                  />
-                </div>
-                {/* Company Name */}
-                <p className="text-center text-white font-bold text-[10px] md:text-[11px] tracking-wide leading-snug max-w-[170px] group-hover/card:text-[#3EA9D8] transition-colors duration-300">
-                  {client.name}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Bottom tagline */}
-        <p className="text-center text-white/30 text-[10px] font-medium tracking-widest uppercase mt-6 relative z-10">
-          Delivering Excellence Across Industries
-        </p>
-      </section>
-
-
-
 
       {/* 6. Final CTA Section */}
       <section className="py-12 relative bg-white">

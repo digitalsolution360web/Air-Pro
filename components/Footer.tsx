@@ -40,18 +40,18 @@ const YoutubeIcon = ({ size = 24 }: { size?: number }) => (
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#0d0A30] text-gray-300 pt-24 pb-12 overflow-hidden">
+    <footer className="relative bg-gray-900 text-gray-300 pt-24 pb-12 overflow-hidden">
 
       {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#3EA9D8]/5 rounded-full blur-[120px] pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#1D1860]/50 rounded-full blur-[100px] pointer-events-none"></div>
+      {/* <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#3EA9D8]/5 rounded-full blur-[120px] pointer-events-none"></div> */}
+      {/* <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#1D1860]/50 rounded-full blur-[100px] pointer-events-none"></div> */}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
 
           {/* Brand Info (Spans 4 columns on large screens) */}
           <div className="lg:col-span-4 space-y-7">
-            <div className="bg-white inline-block p-3 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+            <div className="bg-white inline-block p-3 rounded-xl">
               <Image
                 src="/logo1.png"
                 alt="Brand Logo"

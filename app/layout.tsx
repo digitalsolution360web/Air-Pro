@@ -10,8 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Deb Air Express | Professional Cargo & Logistics",
-  description: "India's Premier Logistics Partner — 27 years of reliable cargo delivery across every pincode.",
+  title: "Deb Air Express – Fast & Reliable Courier & Logistics Services in India",
+  description: "Deb Air Express provides fast, secure, and reliable courier, cargo, and logistics services across India. Trusted delivery solutions for businesses and individuals.",
+  keywords: "Deb Air Express, courier service India, logistics company, cargo services, parcel delivery, express delivery, air cargo services, shipping services India, fast courier service, logistics solutions, transport services, package delivery India"
 };
 
 export default function RootLayout({

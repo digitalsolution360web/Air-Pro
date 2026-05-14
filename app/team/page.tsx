@@ -17,8 +17,9 @@ export default function Team() {
 
   const team = [
     {
+      name: "Team Member",
+      role: "Logistics Specialist",
       img: "/team.jpg",
-      // desc: "Driving the strategic vision of Deb Air Express with over 27 years of logistical leadership and innovation.",
       socials: ["#", "#", "#"]
     },
     {
@@ -29,10 +30,9 @@ export default function Team() {
       socials: ["#", "#", "#"]
     },
     {
-
-
+      name: "Expert Staff",
+      role: "Operations Head",
       img: "/team2.jpg",
-      // desc: "Optimizing our proprietary tracking infrastructure and sustainable fleet management systems.",
       socials: ["#", "#", "#"]
     }
   ];
@@ -123,7 +123,7 @@ export default function Team() {
                 <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden mb-8 shadow-2xl border-8 border-gray-50 group-hover:border-[#3EA9D8]/10 transition-all">
                   <Image
                     src={member.img}
-                    alt={member.name}
+                    alt={member.name || "Team Member"}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700 grayscale-[0.3] group-hover:grayscale-0"
                   />
