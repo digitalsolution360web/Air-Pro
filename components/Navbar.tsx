@@ -69,7 +69,7 @@ export default function Navbar() {
 
             {/* Login Button Section */}
             <div className="hidden md:flex items-center pl-4">
-              <Link href="/https://courier-main.vercel.app/dashboard">
+              <Link href="https://courier-main.vercel.app/dashboard">
                 <button className="relative overflow-hidden bg-[#1D1860] text-white px-8 py-2.5 rounded-full font-bold text-[15px] shadow-[0_4px_14px_0_rgba(29,24,96,0.25)] hover:shadow-[0_6px_20px_rgba(62,169,216,0.3)] hover:-translate-y-0.5 transition-all duration-300 group">
                   <span className="relative z-10">Login / Sign In</span>
                   {/* Subtle shine effect */}
@@ -113,7 +113,7 @@ export default function Navbar() {
                     </Link>
                   ))}
                   <div className="pt-3 pb-2 px-1">
-                    <Link href="/https://courier-main.vercel.app/dashboard" onClick={() => setIsOpen(false)}>
+                    <Link href="https://courier-main.vercel.app/dashboard" onClick={() => setIsOpen(false)}>
                       <button className="w-full bg-[#1D1860] hover:bg-[#151147] text-white px-4 py-3.5 rounded-xl transition-all shadow-lg font-bold text-[16px]">
                         Login Account
                       </button>
