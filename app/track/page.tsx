@@ -130,7 +130,7 @@ export default function Track() {
   const statusDetails = currentStatus ? getStatusDetails(currentStatus) : null;
 
   return (
-    <div className="flex flex-col w-full min-h-screen font-sans bg-white overflow-x-hidden pt-24">
+    <div className="flex flex-col w-full min-h-screen font-sans bg-white overflow-x-hidden pt-16 md:pt-20">
 
       {/* 1. Dynamic Hero Banner */}
       <section className="relative w-full py-20 lg:py-32 bg-[#06041A] overflow-hidden">
@@ -179,29 +179,33 @@ export default function Track() {
               animate="visible"
               variants={fadeInUp}
               onSubmit={handleTrack}
-              className="relative max-w-2xl group"
+              className="relative max-w-2xl group flex flex-col md:block"
             >
-              <div className="absolute inset-y-0 left-6 flex items-center pointer-events-none">
-                <Search className="text-[#3EA9D8] w-6 h-6" />
+              <div className="relative">
+                <div className="absolute inset-y-0 left-6 flex items-center pointer-events-none">
+                  <Search className="text-[#3EA9D8] w-5 h-5 md:w-6 md:h-6" />
+                </div>
+                <input
+                  type="text"
+                  value={trackingNumber}
+                  onChange={(e) => setTrackingNumber(e.target.value)}
+                  placeholder="AWB / Ref No."
+                  className="w-full bg-white/10 backdrop-blur-2xl border-2 border-white/10 text-white rounded-2xl md:rounded-3xl py-5 md:py-6 pl-14 md:pl-16 pr-4 md:pr-44 focus:outline-none focus:border-[#3EA9D8] transition-all text-sm md:text-base font-bold placeholder:text-gray-500"
+                />
+                <button
+                  type="submit"
+                  disabled={isTracking}
+                  className="hidden md:flex absolute right-3 top-3 bottom-3 bg-[#3EA9D8] hover:bg-white hover:text-[#1D1860] text-white px-8 rounded-2xl font-black text-xs uppercase tracking-widest transition-all active:scale-95 items-center shadow-xl disabled:opacity-50"
+                >
+                  {isTracking ? "Processing..." : "Track Now"}
+                </button>
               </div>
-              <input
-                type="text"
-                value={trackingNumber}
-                onChange={(e) => setTrackingNumber(e.target.value)}
-                placeholder="Enter Consignment Number (AWB / Ref No.)"
-                className="w-full bg-white/10 backdrop-blur-2xl border-2 border-white/10 text-white rounded-3xl py-6 pl-16 pr-44 focus:outline-none focus:border-[#3EA9D8] transition-all text-sm md:text-base font-bold placeholder:text-gray-500"
-              />
               <button
                 type="submit"
                 disabled={isTracking}
-                className="absolute right-3 top-3 bottom-3 bg-[#3EA9D8] hover:bg-white hover:text-[#1D1860] text-white px-8 rounded-2xl font-black text-xs uppercase tracking-widest transition-all active:scale-95 flex items-center shadow-xl disabled:opacity-50"
+                className="md:hidden mt-4 bg-[#3EA9D8] hover:bg-white hover:text-[#1D1860] text-white py-4 rounded-xl font-black text-xs uppercase tracking-widest transition-all active:scale-95 flex items-center justify-center shadow-xl disabled:opacity-50"
               >
-                {isTracking ? (
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                    Processing...
-                  </div>
-                ) : "Track Now"}
+                {isTracking ? "Processing..." : "Track Now"}
               </button>
             </motion.form>
 

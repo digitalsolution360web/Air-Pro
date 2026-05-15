@@ -30,7 +30,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex flex-col w-full min-h-screen font-sans bg-white overflow-x-hidden pt-24">
+    <div className="flex flex-col w-full min-h-screen font-sans bg-white overflow-x-hidden pt-16 md:pt-20">
       
       {/* 1. Cinematic Header Banner */}
       <section className="relative w-full py-16 lg:py-24 overflow-hidden bg-[#06041A]">

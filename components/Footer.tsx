@@ -1,7 +1,10 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Phone, Mail, ShieldCheck, Globe, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, ShieldCheck, Globe, Clock, X, Send, ChevronRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const FacebookIcon = ({ size = 24 }: { size?: number }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -39,6 +42,8 @@ const YoutubeIcon = ({ size = 24 }: { size?: number }) => (
 );
 
 export default function Footer() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   return (
     <footer className="relative bg-gray-900 text-gray-300 pt-24 pb-12 overflow-hidden">
 
@@ -195,9 +200,12 @@ export default function Footer() {
       {/* MOBILE: Full-Width Fixed Bottom Bar (hidden on desktop) */}
       <div className="md:hidden fixed bottom-0 left-0 w-full z-[9999]">
         <div className="bg-white shadow-[0_-4px_20px_rgba(0,0,0,0.1)] flex items-center justify-between px-4 py-3">
-          <span className="bg-[#0d0A30] text-white font-semibold text-sm tracking-wide px-4 py-2 rounded-full">
+          <button 
+            onClick={() => setIsPopupOpen(true)}
+            className="bg-[#0d0A30] text-white font-semibold text-sm tracking-wide px-6 py-2 rounded-full active:scale-95 transition-transform shadow-lg border border-white/10"
+          >
             Ship Now
-          </span>
+          </button>
           <div className="flex items-center gap-3">
             <a
               href="tel:+919811350228"
@@ -227,6 +235,98 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      {/* Shipment Inquiry Popup */}
+      <AnimatePresence>
+        {isPopupOpen && (
+          <div className="fixed inset-0 z-[10000] flex items-center justify-center p-4">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsPopupOpen(false)}
+              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100"
+            >
+              {/* Header */}
+              <div className="bg-[#1D1860] p-6 text-white relative">
+                <button 
+                  onClick={() => setIsPopupOpen(false)}
+                  className="absolute top-4 right-4 p-2 hover:bg-white/10 rounded-full transition-colors"
+                >
+                  <X size={20} />
+                </button>
+                <h3 className="text-xl font-bold">Start Your Shipment</h3>
+                <p className="text-white/70 text-sm mt-1">Fill in the details below and we'll get back to you instantly.</p>
+              </div>
+
+              {/* Form */}
+              <form className="p-5 md:p-8 space-y-4" onSubmit={(e) => { e.preventDefault(); setIsPopupOpen(false); alert("Thank you! Our team will contact you shortly."); }}>
+                <div className="grid grid-cols-1 gap-4">
+                  <div>
+                    <label className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 block">Full Name</label>
+                    <input 
+                      type="text" 
+                      placeholder="John Doe" 
+                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#3EA9D8]/20 focus:border-[#3EA9D8] transition-all text-gray-900"
+                      required
+                    />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 block">Phone Number</label>
+                      <input 
+                        type="tel" 
+                        placeholder="+91 00000 00000" 
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#3EA9D8]/20 focus:border-[#3EA9D8] transition-all text-gray-900"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 block">Origin City</label>
+                      <input 
+                        type="text" 
+                        placeholder="New Delhi" 
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#3EA9D8]/20 focus:border-[#3EA9D8] transition-all text-gray-900"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 block">Destination City</label>
+                    <input 
+                      type="text" 
+                      placeholder="Mumbai" 
+                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#3EA9D8]/20 focus:border-[#3EA9D8] transition-all text-gray-900"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 block">Service Type</label>
+                    <select className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#3EA9D8]/20 focus:border-[#3EA9D8] transition-all text-gray-900 appearance-none">
+                      <option>Air Express</option>
+                      <option>Surface Cargo</option>
+                      <option>International Shipping</option>
+                      <option>Document Courier</option>
+                    </select>
+                  </div>
+                </div>
+
+                <button 
+                  type="submit"
+                  className="w-full bg-[#3EA9D8] hover:bg-[#1D1860] text-white font-bold py-4 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 group mt-4"
+                >
+                  Request a Quote <Send size={18} className="group-hover:translate-x-1 transition-transform" />
+                </button>
+              </form>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </footer>
   );
 }

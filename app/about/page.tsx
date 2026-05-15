@@ -59,7 +59,7 @@ export default function About() {
   ];
 
   return (
-    <div className="flex flex-col w-full min-h-screen font-sans bg-white overflow-x-hidden pt-24">
+    <div className="flex flex-col w-full min-h-screen font-sans bg-white overflow-x-hidden pt-16 md:pt-20">
       
       {/* 1. Refined Hero Section — Smaller font sizes for a more professional feel */}
       <section className="relative w-full py-12 lg:py-20 overflow-hidden bg-[#06041A]">
@@ -306,7 +306,7 @@ export default function About() {
                 "M/S Synergy Footwear Components", "M/s. Aroma Chemical Agencies (I) Pvt. Ltd.", "M/s Bhabha Atomic Research Center", 
                 "M/s AVC Systems Solutions Pvt. Ltd."
               ].map((client, idx) => (
-                <div key={idx} className="bg-white px-5 py-3 rounded-full border border-gray-200 shadow-sm text-xs md:text-sm font-bold text-[#1D1860] hover:border-[#3EA9D8] hover:text-[#3EA9D8] transition-colors whitespace-nowrap cursor-default">
+                <div key={idx} className="bg-white px-4 md:px-5 py-2 md:py-3 rounded-full border border-gray-200 shadow-sm text-[10px] md:text-sm font-bold text-[#1D1860] hover:border-[#3EA9D8] hover:text-[#3EA9D8] transition-colors cursor-default">
                   {client}
                 </div>
               ))}
@@ -368,7 +368,7 @@ export default function About() {
               </p>
            </div>
 
-           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 { r: "North India", h: "Delhi NCR", d: "High-speed air sorting and regional hub." },
                 { r: "West India", h: "Mumbai", d: "Coastal logistics lead and pharma terminal." },

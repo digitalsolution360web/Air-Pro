@@ -103,7 +103,7 @@ export default function Home() {
     <div className="flex flex-col w-full  font-sans bg-white overflow-x-hidden">
 
       {/* 1. Hero Section */}
-      <section className="relative w-full pt-20 pb-16 lg:pt-32 lg:pb-24 overflow-hidden min-h-[550px] md:min-h-[650px] lg:min-h-[750px] flex items-center bg-black">
+      <section className="relative w-full pt-16 md:pt-20 lg:pt-24 pb-16 lg:pb-24 overflow-hidden min-h-[550px] md:min-h-[650px] lg:min-h-[750px] flex items-center bg-black">
 
         {/* Background Image Slider */}
         <AnimatePresence mode="popLayout">
@@ -137,8 +137,8 @@ export default function Home() {
             animate="visible"
             variants={staggerContainer}
           >
-            <motion.div variants={fadeInUp} className="inline-flex items-center bg-[#3EA9D8]/20 backdrop-blur-md border border-[#3EA9D8]/30 px-3 py-1 rounded-full text-[#3EA9D8] text-xs font-bold mb-6 tracking-wider uppercase">
-              <Package size={14} className="mr-2" />
+            <motion.div variants={fadeInUp} className="inline-flex mt-5 items-center bg-[#3EA9D8]/20 backdrop-blur-md border border-[#3EA9D8]/30 px-3 py-1 rounded-full text-[#3EA9D8] text-xs font-bold mb-6 tracking-wider uppercase">
+              <Package size={14} className="mr-2 " />
               India's Premier Logistics Node
             </motion.div>
 

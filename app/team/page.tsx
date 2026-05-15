@@ -59,7 +59,7 @@ export default function Team() {
   ];
 
   return (
-    <div className="flex flex-col w-full min-h-screen font-sans bg-white overflow-x-hidden pt-24">
+    <div className="flex flex-col w-full min-h-screen font-sans bg-white overflow-x-hidden pt-16 md:pt-20">
 
       {/* 1. Cinematic Header Banner */}
       <section className="relative w-full py-16 lg:py-24 overflow-hidden bg-[#06041A]">
@@ -79,7 +79,7 @@ export default function Team() {
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
-            className="inline-block bg-[#3EA9D8]/20 backdrop-blur-md border border-[#3EA9D8]/30 px-6 py-2 rounded-full text-[#3EA9D8] text-[10px] font-black tracking-widest uppercase mb-8"
+            className="inline-block bg-[#3EA9D8]/20 backdrop-blur-md border border-[#3EA9D8]/30 px-6 py-2 rounded-full text-[#3EA9D8] text-[9px] md:text-[10px] font-black tracking-widest uppercase mb-6 md:mb-8"
           >
             The Pillars of Deb Air Express
           </motion.div>
@@ -87,16 +87,16 @@ export default function Team() {
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
-            className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight"
+            className="text-2xl md:text-5xl font-black text-white mb-6 leading-tight"
           >
-            The Visionaries Behind <br />
+            The Visionaries Behind <br className="hidden md:block" />
             <span className="text-[#3EA9D8]">Indian Logistics</span>
           </motion.h1>
           <motion.p
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
-            className="text-gray-100 text-sm md:text-lg font-bold max-w-2xl mx-auto leading-relaxed"
+            className="text-gray-100 text-xs md:text-lg font-bold max-w-2xl mx-auto leading-relaxed px-4 md:px-0"
           >
             Meet the leadership team dedicated to moving your business forward with precision, transparency, and 27 years of industrial excellence.
           </motion.p>
@@ -107,9 +107,9 @@ export default function Team() {
       </section>
 
       {/* 2. Team Grid Section */}
-      <section className="py-20 bg-white relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
             {team.map((member, idx) => (
               <motion.div
                 key={idx}
@@ -120,7 +120,7 @@ export default function Team() {
                 className="group"
               >
                 {/* Card Image Wrapper */}
-                <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden mb-8 shadow-2xl border-8 border-gray-50 group-hover:border-[#3EA9D8]/10 transition-all">
+                <div className="relative aspect-[4/5] rounded-[2rem] md:rounded-[3rem] overflow-hidden mb-6 md:mb-8 shadow-2xl border-4 md:border-8 border-gray-50 group-hover:border-[#3EA9D8]/10 transition-all">
                   <Image
                     src={member.img}
                     alt={member.name || "Team Member"}
@@ -128,10 +128,10 @@ export default function Team() {
                     className="object-cover group-hover:scale-105 transition-transform duration-700 grayscale-[0.3] group-hover:grayscale-0"
                   />
                   {/* Overlay On Hover */}
-                  <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-[#1D1860] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 bg-gradient-to-t from-[#1D1860] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <div className="flex gap-4 justify-center">
                       {SocialLogos.map((Logo, i) => (
-                        <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-[#3EA9D8] transition-all">
+                        <a key={i} href="#" className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-[#3EA9D8] transition-all">
                           <Logo />
                         </a>
                       ))}
@@ -155,7 +155,7 @@ export default function Team() {
         </div>
 
         {/* Brand Background Text (Subtle) */}
-        <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 font-black text-[15rem] text-gray-50 pointer-events-none select-none -z-10 uppercase tracking-tighter opacity-50 font-sans">
+        <div className="absolute -bottom-10 md:-bottom-20 left-1/2 -translate-x-1/2 font-black text-[5rem] md:text-[15rem] text-gray-50 pointer-events-none select-none -z-10 uppercase tracking-tighter opacity-50 font-sans whitespace-nowrap">
           LEGACY
         </div>
       </section>
