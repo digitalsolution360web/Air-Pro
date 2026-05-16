@@ -295,11 +295,12 @@ export default function Track() {
 
                     <div className="relative">
                       {/* Vertical Line */}
-                      <div className="absolute left-6 top-2 bottom-2 w-0.5 bg-gradient-to-b from-[#3EA9D8] via-gray-300 to-gray-200 rounded-full"></div>
+                      <div className="absolute left-6 top-2 bottom-2 w-0.5 bg-gradient-to-t from-[#3EA9D8] via-gray-300 to-gray-200 rounded-full"></div>
 
                       <div className="space-y-6">
-                        {trackingData.map((item, index) => {
-                          const isLatest = index === 0;
+                        {trackingData.reverse().map((item, index) => {
+                          
+                          const isLatest = index === trackingData.length - 1;
                           const itemStatusDetails = getStatusDetails(item.status);
                           const StatusIcon = itemStatusDetails.icon;
 
@@ -309,7 +310,9 @@ export default function Track() {
                               initial={{ opacity: 0, x: -20 }}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{ delay: index * 0.1 }}
-                              className="relative flex gap-5 items-start group"
+                              className={`relative flex gap-5 items-start group ${isLatest
+                                  ? 'items-end' : 'items-start'
+                                }`}
                             >
                               {/* Timeline Dot */}
                               <div className={`relative z-10 w-12 h-12 rounded-full flex items-center justify-center shrink-0 shadow-md transition-all duration-300 group-hover:scale-110 ${isLatest
@@ -324,16 +327,18 @@ export default function Track() {
                               </div>
 
                               {/* Content */}
-                              <div className="flex-1 pb-6">
+                              <div className={`flex-1 ${isLatest
+                                  ? 'pb-0' : 'pb-6'
+                                }`}>
                                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
                                   <h4 className={`font-black text-sm uppercase tracking-wide ${isLatest ? 'text-[#1D1860]' : 'text-gray-700'
                                     }`}>
                                     {item.status}
-                                    {isLatest && (
+                                    {/* {isLatest && (
                                       <span className="ml-2 text-[10px bg-[#3EA9D8]/10 text-[#3EA9D8] px-2 py-0.5 rounded-full">
                                         CURRENT
                                       </span>
-                                    )}
+                                    )} */}
                                   </h4>
                                   <span className="text-xs font-bold text-gray-400 flex items-center gap-1">
                                     <Clock size={10} />
