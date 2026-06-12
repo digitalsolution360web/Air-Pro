@@ -25,7 +25,7 @@ export default function Team() {
     {
       name: "Lalan Kumar Singh",
       role: "Founder",
-      img: "/founder.jpeg",
+      img: "/lalan-kumar-singh-director.webp",
       desc: "Ensuring seamless surface and air cargo movements across the nationwide multi-modal network.",
       socials: ["#", "#", "#"]
     },
@@ -33,6 +33,12 @@ export default function Team() {
       name: "Expert Staff",
       role: "Operations Head",
       img: "/team2.jpg",
+      socials: ["#", "#", "#"]
+    },
+    {
+      name: "Team Member",
+      role: "Logistics Specialist",
+      img: "/neha-team-member.webp",
       socials: ["#", "#", "#"]
     }
   ];
