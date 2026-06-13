@@ -342,7 +342,7 @@ export default function Track() {
                                   </h4>
                                   <span className="text-xs font-bold text-gray-400 flex items-center gap-1">
                                     <Clock size={10} />
-                                    {formatDate(item.updated_at)}
+                                    {new Date(item.updated_at.replace(' ', 'T')).toLocaleString('en-IN', { timeZone: 'UTC', day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' })}
                                   </span>
                                 </div>
 
